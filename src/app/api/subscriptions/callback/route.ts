@@ -1,0 +1,187 @@
+/**
+ * POST /api/subscriptions/callback
+ * Handle PayGate payment callback notification
+ */
+
+import { NextRequest, NextResponse } from 'next/server';
+import { prisma } from '@/lib/prisma';
+import { payGate } from '@/lib/paygate';
+import { sendEmail } from '@/lib/email';
+import PaymentSuccessEmail from '@/emails/PaymentSuccessEmail';
+import { createNotification } from '@/lib/notifications';
+
+export async function POST(request: NextRequest) {
+  try {
+    console.log('[Callback] ===== START =====');
+    
+    // PayGate sends URL-encoded form data, NOT JSON
+    const formData = await request.formData();
+    const data: Record<string, string> = {};
+    
+    formData.forEach((value, key) => {
+      data[key] = String(value);
+    });
+
+    console.log('[Callback] Received notification');
+    
+    // Log ALL fields for checksum debugging
+    const allFields = Object.entries(data)
+      .filter(([k]) => k !== 'CHECKSUM')
+      .sort((a, b) => a[0].localeCompare(b[0]))
+      .map(([k, v]) => `${k}=${v}`);
+    console.log('[Callback] ALL FIELDS (excluding CHECKSUM):');
+    allFields.forEach(f => console.log('[Callback]   ' + f));
+    console.log('[Callback] CHECKSUM:', data.CHECKSUM);
+    
+    // Log field count and names
+    const fieldCount = Object.keys(data).length;
+    const fieldNames = Object.keys(data).sort().join(', ');
+    console.log('[Callback] Total fields: ' + fieldCount);
+    console.log('[Callback] Field names: ' + fieldNames);
+
+    // ⚠️ CRITICAL: Verify checksum before processing any data
+    // Use received field order — PayGate calculates checksum in the order fields are sent
+    if (!payGate.verifyCallbackChecksum(data)) {
+      console.error('[Callback] ❌ Invalid checksum in PayGate notification');
+      console.error('[Callback] Potential tampering - rejecting notification');
+      return new NextResponse('OK');
+    }
+
+    console.log('[Callback] ✅ Checksum verified');
+
+    // Check transaction status
+    const isSuccess = data.TRANSACTION_STATUS === '1';
+    console.log('[Callback] Transaction result:', isSuccess ? 'SUCCESS' : 'FAILED');
+
+    // Find payment by REFERENCE
+    console.log('[Callback] Looking up payment record...');
+    
+    const payment = await prisma.payment.findUnique({
+      where: { transactionRef: data.REFERENCE },
+      include: {
+        subscription: {
+          include: {
+            plan: true,
+          },
+        },
+      },
+    });
+
+    if (!payment) {
+      console.error('[Callback] ❌ Payment record not found for reference:', data.REFERENCE);
+      // Still return OK to prevent PayGate retries
+      return new NextResponse('OK');
+    }
+
+    console.log('[Callback] ✅ Found payment:', payment.id);
+
+    if (!isSuccess) {
+      console.log('[Callback] Payment failed - updating to FAILED status');
+
+      // Update payment record for failed transaction
+      await prisma.payment.update({
+        where: { id: payment.id },
+        data: {
+          status: 'FAILED',
+          failureReason: data.FAILURE_REASON || 'Payment declined at gateway',
+          paymentGatewayId: data.TRANSACTION_ID || '',
+        },
+      });
+
+      console.log('[Callback] ⚠️ Payment marked as FAILED');
+      // Response with plain text OK for PayGate (required by documentation)
+      return new NextResponse('OK');
+    }
+
+    // Payment successful - update payment record
+    console.log('[Callback] Payment successful - updating records...');
+
+    await (prisma as any).$executeRaw`
+      UPDATE "payments"
+      SET 
+        "status" = 'COMPLETED',
+        "paid_at" = NOW(),
+        "payment_gateway_id" = ${data.TRANSACTION_ID || ''},
+        "pay_request_id" = ${data.PAY_REQUEST_ID || null},
+        "updated_at" = NOW()
+      WHERE "id" = ${payment.id}
+    `;
+
+    console.log('[Callback] ✅ Payment marked as COMPLETED');
+
+    // Activate subscription
+    console.log('[Callback] Activating subscription for businessId:', payment.subscription.businessId);
+    
+    const subscription = payment.subscription;
+    const endDate = new Date();
+    
+    if (subscription.billingCycle === 'YEARLY') {
+      endDate.setFullYear(endDate.getFullYear() + 1);
+    } else {
+      endDate.setMonth(endDate.getMonth() + 1);
+    }
+
+    await prisma.subscription.update({
+      where: { id: subscription.id },
+      data: {
+        status: 'ACTIVE',
+        endDate,
+        renewalDate: endDate,
+        currentPaymentId: payment.id,
+      },
+    });
+
+    console.log('[Callback] ✅ Subscription ACTIVATED');
+
+    // Send payment success email
+    try {
+      const business = await prisma.business.findUnique({
+        where: { id: subscription.businessId },
+        include: { owner: { select: { email: true, name: true } } },
+      });
+      if (business?.owner?.email) {
+        const renewalDate = endDate.toLocaleDateString('en-NA', { year: 'numeric', month: 'long', day: 'numeric' });
+        await sendEmail({
+          to: business.owner.email,
+          subject: `Payment confirmed — ${subscription.plan.name} plan is now active`,
+          react: PaymentSuccessEmail({
+            businessName: business.name,
+            ownerEmail: business.owner.email,
+            planName: subscription.plan.name,
+            amount: Number(payment.amount),
+            billingCycle: subscription.billingCycle,
+            renewalDate,
+            transactionRef: data.REFERENCE,
+          }),
+        });
+        console.log('[Callback] ✅ Payment success email sent to', business.owner.email);
+
+        // In-app notification
+        await createNotification({
+          userId: business.ownerId,
+          type: 'SYSTEM',
+          title: '💳 Payment Confirmed',
+          message: `Your ${subscription.plan.name} plan is now active. Thank you for subscribing!`,
+          data: { businessId: business.id, planName: subscription.plan.name },
+        });
+      }
+    } catch (emailError) {
+      console.error('[Callback] Email/notification failed (non-blocking):', emailError);
+    }
+
+    console.log('[Callback] ===== END (SUCCESS) =====');
+
+    // IMPORTANT: Respond with plain text OK (required by PayGate documentation)
+    return new NextResponse('OK');
+  } catch (error) {
+    console.error('[Callback] ===== EXCEPTION =====');
+    console.error('[Callback] Error:', error);
+    console.error('[Callback] Error type:', error?.constructor?.name);
+    if (error instanceof Error) {
+      console.error('[Callback] Stack:', error.stack?.split('\n').slice(0, 5).join('\n'));
+    }
+    // Even on error, return OK to prevent PayGate retries
+    // Log the error for manual investigation
+    return new NextResponse('OK');
+  }
+}
