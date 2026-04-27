@@ -18,12 +18,12 @@ export const BusinessStatusEmail = ({
   return (
     <Html>
       <Head />
-      <Preview>{isApproved ? `${businessName} is now live on Mzansi Services!` : `Update on your ${businessName} listing`}</Preview>
+      <Preview>{isApproved ? `${businessName} is now live on Botswana Services!` : `Update on your ${businessName} listing`}</Preview>
       <Body style={{ backgroundColor: '#f9fafb', fontFamily: 'Arial, sans-serif', color: '#374151' }}>
         <Container style={{ maxWidth: 600, margin: '0 auto', background: '#fff', padding: 32, borderRadius: 12, border: '1px solid #e5e7eb' }}>
           <Section style={{ textAlign: 'center', marginBottom: 24 }}>
             <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#1f2937', margin: 0 }}>
-              Mzansi Services
+              Botswana Services
             </Text>
           </Section>
 
@@ -46,7 +46,7 @@ export const BusinessStatusEmail = ({
           {isApproved && (
             <>
               <Text style={{ fontSize: 16, margin: '16px 0' }}>
-                Congratulations! Your business listing has been reviewed and approved by our team. Your business is now visible to all users on Mzansi Services.
+                Congratulations! Your business listing has been reviewed and approved by our team. Your business is now visible to all users on Botswana Services.
               </Text>
               <Section style={{ textAlign: 'center', margin: '24px 0' }}>
                 <Link href="https://www.namibiaservices.com/business" style={{
@@ -87,7 +87,7 @@ export const BusinessStatusEmail = ({
 
           <Hr style={{ borderColor: '#e5e7eb', margin: '24px 0' }} />
           <Text style={{ fontSize: 12, color: '#9ca3af', textAlign: 'center' as const }}>
-            © 2025 Mzansi Services. All rights reserved.
+            © 2025 Botswana Services. All rights reserved.
           </Text>
         </Container>
       </Body>

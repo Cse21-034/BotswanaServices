@@ -1,5 +1,5 @@
 /**
- * Utility to find the nearest South African city from GPS coordinates
+ * Utility to find the nearest Botswanan city from GPS coordinates
  * Used for the "Use my location" feature in hero search
  */
 
@@ -9,43 +9,43 @@ interface NamibiaCity {
   longitude: number;
 }
 
-// South Africa approximate boundaries
+// Botswana approximate boundaries
 const NAMIBIA_BOUNDS = {
-  minLat: -34.9,
-  maxLat: -22.1,
-  minLon: 16.4,
-  maxLon: 32.9,
+  minLat: -26.9,
+  maxLat: -17.8,
+  minLon: 19.9,
+  maxLon: 29.4,
 };
 
 const NAMIBIA_CITIES: NamibiaCity[] = [
-  { name: "Johannesburg", latitude: -26.2041, longitude: 28.0473 },
-  { name: "Cape Town", latitude: -33.9249, longitude: 18.4241 },
-  { name: "Durban", latitude: -29.8587, longitude: 31.0218 },
-  { name: "Pretoria", latitude: -25.7461, longitude: 28.1881 },
-  { name: "Gqeberha", latitude: -33.9608, longitude: 25.6022 },
-  { name: "Bloemfontein", latitude: -29.0852, longitude: 26.1596 },
-  { name: "East London", latitude: -32.9823, longitude: 27.9068 },
-  { name: "Polokwane", latitude: -23.9045, longitude: 29.4689 },
-  { name: "Nelspruit", latitude: -25.4753, longitude: 30.9694 },
-  { name: "Kimberley", latitude: -28.7323, longitude: 24.7710 },
-  { name: "Pietermaritzburg", latitude: -29.6006, longitude: 30.3794 },
-  { name: "Rustenburg", latitude: -25.6558, longitude: 27.2422 },
-  { name: "George", latitude: -33.9646, longitude: 22.4618 },
-  { name: "Welkom", latitude: -27.9837, longitude: 26.7365 },
-  { name: "Newcastle", latitude: -27.7634, longitude: 29.9316 },
-  { name: "Richards Bay", latitude: -28.7833, longitude: 32.0500 },
-  { name: "Mahikeng", latitude: -25.8648, longitude: 25.6432 },
-  { name: "Upington", latitude: -28.4479, longitude: 21.2561 },
-  { name: "Klerksdorp", latitude: -26.8672, longitude: 26.6667 },
-  { name: "Stellenbosch", latitude: -33.9321, longitude: 18.8602 },
-  { name: "Sandton", latitude: -26.1076, longitude: 28.0567 },
+  { name: "Gaborone", latitude: -24.6282, longitude: 25.9231 },
+  { name: "Francistown", latitude: -21.1661, longitude: 27.5147 },
+  { name: "Molepolole", latitude: -24.4067, longitude: 25.4951 },
+  { name: "Selebi-Phikwe", latitude: -21.9803, longitude: 27.8333 },
+  { name: "Maun", latitude: -19.9833, longitude: 23.4167 },
+  { name: "Serowe", latitude: -22.3833, longitude: 26.7167 },
+  { name: "Kanye", latitude: -24.9667, longitude: 25.3500 },
+  { name: "Mahalapye", latitude: -23.1000, longitude: 26.8167 },
+  { name: "Lobatse", latitude: -25.2167, longitude: 25.6833 },
+  { name: "Palapye", latitude: -22.5500, longitude: 27.1333 },
+  { name: "Ramotswa", latitude: -24.8667, longitude: 25.8667 },
+  { name: "Kasane", latitude: -17.8000, longitude: 25.1500 },
+  { name: "Jwaneng", latitude: -24.6028, longitude: 24.7283 },
+  { name: "Orapa", latitude: -21.3000, longitude: 25.3833 },
+  { name: "Letlhakane", latitude: -21.4167, longitude: 25.5833 },
+  { name: "Tlokweng", latitude: -24.6500, longitude: 26.0167 },
+  { name: "Mogoditshane", latitude: -24.5500, longitude: 25.8500 },
+  { name: "Mochudi", latitude: -24.3833, longitude: 26.1500 },
+  { name: "Ghanzi", latitude: -21.6833, longitude: 21.6500 },
+  { name: "Shakawe", latitude: -18.3667, longitude: 21.8333 },
+  { name: "Tsabong", latitude: -26.0333, longitude: 22.4500 },
 ];
 
 /**
- * Check if coordinates are within South Africa
+ * Check if coordinates are within Botswana
  * @param latitude - Geographic latitude
  * @param longitude - Geographic longitude
- * @returns true if coordinates are within South Africa bounds
+ * @returns true if coordinates are within Botswana bounds
  */
 export function isWithinNamibia(latitude: number, longitude: number): boolean {
   return (
@@ -80,20 +80,20 @@ function calculateDistance(
 }
 
 /**
- * Find the nearest South African city to given coordinates
+ * Find the nearest Botswanan city to given coordinates
  * @param latitude - User's latitude
  * @param longitude - User's longitude
- * @returns The name of the nearest city, or null if user is outside South Africa
+ * @returns The name of the nearest city, or null if user is outside Botswana
  */
 export function findNearestCity(latitude: number, longitude: number): string | null {
   if (!latitude || !longitude) {
-    return "Johannesburg"; // Default fallback
+    return "Gaborone"; // Default fallback
   }
 
-  // Check if user is within South Africa bounds
+  // Check if user is within Botswana bounds
   if (!isWithinNamibia(latitude, longitude)) {
     console.warn(
-      `❌ User location (${latitude.toFixed(4)}, ${longitude.toFixed(4)}) is outside South Africa. No service available.`
+      `❌ User location (${latitude.toFixed(4)}, ${longitude.toFixed(4)}) is outside Botswana. No service available.`
     );
     return null;
   }

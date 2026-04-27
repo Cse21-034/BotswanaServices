@@ -368,7 +368,7 @@ const SectionSubscriptionPackages: React.FC<SectionSubscriptionPackagesProps> = 
     ];
     return (
       <div className="relative pt-4">
-        <Heading isCenter desc="You're on Desert Elephants. Unlock the full power of Mzansi Services.">
+        <Heading isCenter desc="You're on Desert Elephants. Unlock the full power of Botswana Services.">
           Ready to go further? 🦁
         </Heading>
         <div className="mt-10 max-w-2xl mx-auto bg-gradient-to-br from-orange-500 to-red-600 rounded-3xl p-8 text-white shadow-2xl">
@@ -414,7 +414,7 @@ const SectionSubscriptionPackages: React.FC<SectionSubscriptionPackagesProps> = 
       {/* Heading */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
         <Heading isCenter desc="Choose the perfect plan for your business and unlock powerful features">
-          Mzansi Services Packages
+          Botswana Services Packages
         </Heading>
       </div>
 

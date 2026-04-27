@@ -177,7 +177,7 @@ export const MembershipApprovalPanel: React.FC<MembershipApprovalProps> = ({
                       {membership.name}
                     </h3>
                     <p className="text-sm text-gray-600 dark:text-gray-400">
-                      {membership.city}, South Africa
+                      {membership.city}, Botswana
                     </p>
                   </div>
 

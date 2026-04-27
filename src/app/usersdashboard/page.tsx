@@ -41,7 +41,7 @@ const mockReviews = [
     date: "2024-01-15",
     likes: 12,
     businessCategory: "Logistics",
-    businessLocation: "Johannesburg"
+    businessLocation: "Gaborone"
   },
   {
     id: 2,
@@ -61,7 +61,7 @@ const mockReviews = [
     date: "2023-12-20",
     likes: 3,
     businessCategory: "Hospitality",
-    businessLocation: "Johannesburg"
+    businessLocation: "Gaborone"
   }
 ];
 
@@ -70,7 +70,7 @@ const mockFavorites = [
     id: 1,
     business: "Sprint Couriers & Logistics",
     category: "Logistics & Courier",
-    location: "Johannesburg",
+    location: "Gaborone",
     rating: 4.8,
     reviews: 127,
     isOpen: true,
@@ -90,7 +90,7 @@ const mockFavorites = [
     id: 3,
     business: "BuildPro Construction",
     category: "Construction",
-    location: "Johannesburg",
+    location: "Gaborone",
     rating: 3.8,
     reviews: 23,
     isOpen: false,
@@ -277,7 +277,7 @@ const UserDashboardPage: FC<UserDashboardPageProps> = ({}) => {
             <div>
               <h2 className="text-2xl font-bold mb-2">Welcome back, {dashboardData?.user.name || "User"}! 👋</h2>
               <p className="text-primary-100">
-                Thanks for helping others discover great businesses in South Africa.
+                Thanks for helping others discover great businesses in Botswana.
               </p>
             </div>
             <div className="hidden md:block">

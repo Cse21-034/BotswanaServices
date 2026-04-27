@@ -2,7 +2,7 @@ import PaymentSuccess from '@/app/subscription/PaymentSuccess';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Payment Status | Mzansi Services',
+  title: 'Payment Status | Botswana Services',
   description: 'View your payment status',
 };
 

@@ -16,10 +16,10 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Mzansi Services - Online Booking Management",
-  description: "Book and manage services in South Africa with ease",
+  title: "Botswana Services - Online Booking Management",
+  description: "Book and manage services in Botswana with ease",
   icons: {
-    icon: "/images/mzansi-logo/fulllogo1.PNG",
+    icon: "/images/botswana-logo/fulllogo1.PNG",
   },
 };
 

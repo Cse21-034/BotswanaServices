@@ -21,7 +21,7 @@ const DEMO_DATA: CommentListingDataType[] = [
   {
     name: "Tshepo M.",
     date: "December 15, 2023",
-    comment: "Mma Tlotlo's Kitchen serves the best braai in Johannesburg! The portions are generous and the taste takes me back to my grandmother's cooking. Highly recommended for authentic South African cuisine.",
+    comment: "Mma Tlotlo's Kitchen serves the best setswana in Gaborone! The portions are generous and the taste takes me back to my grandmother's cooking. Highly recommended for authentic Botswanan cuisine.",
     starPoint: 5,
     business: "Mma Tlotlo's Kitchen"
   },
@@ -35,9 +35,9 @@ const DEMO_DATA: CommentListingDataType[] = [
   {
     name: "Kagiso M.",
     date: "November 22, 2023",
-    comment: "SA Couriers delivered my package from Cape Town to Johannesburg in record time. The tracking was accurate and the driver was professional. Highly professional service!",
+    comment: "BW Couriers delivered my package from Maun to Gaborone in record time. The tracking was accurate and the driver was professional. Highly professional service!",
     starPoint: 5,
-    business: "SA Couriers"
+    business: "BW Couriers"
   },
   {
     name: "Amantle B.",

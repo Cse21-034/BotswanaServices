@@ -34,7 +34,7 @@ const DEMO_DATA: SectionHowItWorkProps["data"] = [
     id: 3,
     img: HIW3img,
     title: "Support Local Economy",
-    desc: "Make informed decisions and support South Africa's growing business community with confidence",
+    desc: "Make informed decisions and support Botswana's growing business community with confidence",
   },
 ];
 
@@ -49,7 +49,7 @@ const SectionHowItWork: FC<SectionHowItWorkProps> = ({
     >
       <Heading 
         isCenter 
-        desc="Connecting South Africa with trusted local businesses"
+        desc="Connecting Botswana with trusted local businesses"
       >
         How The Directory Works
       </Heading>

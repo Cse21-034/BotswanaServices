@@ -18,7 +18,7 @@ const SectionHero: FC<SectionHeroProps> = ({ className = "" }) => {
             Connect with verified local businesses
           </h2>
           <span className="text-base md:text-lg text-neutral-500 dark:text-neutral-400">
-            Discover the best businesses across South Africa - from restaurants and shops to professional services and tourism operators.
+            Discover the best businesses across Botswana - from restaurants and shops to professional services and tourism operators.
           </span>
 
         </div>

@@ -20,7 +20,7 @@ export default function AdminSettingsPage() {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState<{ type: "success" | "error"; text: string } | null>(null);
   const [systemSettings, setSystemSettings] = useState({
-    siteName: "Mzansi Services",
+    siteName: "Botswana Services",
     description: "Your trusted service marketplace",
     maintenanceMode: false,
   });

@@ -62,7 +62,7 @@ const AccountSavelists = () => {
                       No saved businesses yet
                     </h3>
                     <p className="text-neutral-500 dark:text-neutral-400 mb-6">
-                      Start saving your favorite South African businesses to access them quickly later
+                      Start saving your favorite Botswanan businesses to access them quickly later
                     </p>
                     <ButtonSecondary>Explore Businesses</ButtonSecondary>
                   </div>
@@ -108,7 +108,7 @@ const AccountSavelists = () => {
                     Your reviews will appear here
                   </h3>
                   <p className="text-neutral-500 dark:text-neutral-400 mb-6 max-w-md mx-auto">
-                    Share your experiences with South African businesses to help others make better decisions
+                    Share your experiences with Botswanan businesses to help others make better decisions
                   </p>
                   <div className="space-y-4 max-w-md mx-auto">
                     <div className="flex items-center justify-between p-4 bg-neutral-50 dark:bg-neutral-800 rounded-xl">

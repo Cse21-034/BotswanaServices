@@ -282,12 +282,12 @@ const SectionGridFilterCard: FC<SectionGridFilterCardProps> = ({
       return `Results for "${searchQuery}"`;
     }
     if (selectedCategory) {
-      return `${selectedCategory} in South Africa`;
+      return `${selectedCategory} in Botswana`;
     }
     if (selectedLocation) {
       return `Businesses in ${selectedLocation}`;
     }
-    return "South Africa Business Directory";
+    return "Botswana Business Directory";
   };
 
   // Get page description based on search criteria and count
@@ -313,7 +313,7 @@ const SectionGridFilterCard: FC<SectionGridFilterCardProps> = ({
       return `${description} • Found ${totalCount} businesses`;
     }
 
-    return `Discover ${totalCount} businesses across South Africa. Use filters to refine your search.`;
+    return `Discover ${totalCount} businesses across Botswana. Use filters to refine your search.`;
   };
 
   const clearAllFilters = () => {

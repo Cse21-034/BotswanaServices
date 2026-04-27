@@ -24,7 +24,7 @@ const LocationInput: FC<LocationInputProps> = ({
   autoFocus = false,
   onInputDone,
   onChange = () => {},
-  placeHolder = "Where in South Africa?",
+  placeHolder = "Where in Botswana?",
   desc = "Search for a city or area",
   className = "nc-flex-1.5",
   divHideVerticalLineClass = "left-10 -right-0.5",
@@ -35,9 +35,9 @@ const LocationInput: FC<LocationInputProps> = ({
   const [value, setValue] = useState("");
   const [showPopover, setShowPopover] = useState(autoFocus);
 
-  // South Africa location suggestions
+  // Botswana location suggestions
   const popularLocations = [
-    "Johannesburg",
+    "Gaborone",
     "Cape Town",
     "Durban",
     "Pretoria",

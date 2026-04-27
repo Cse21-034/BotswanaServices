@@ -10,8 +10,8 @@ export interface LogoProps {
 }
 
 const Logo: React.FC<LogoProps> = ({
-  img = "/images/mzansi-logo/squarelogo.PNG",
-  imgLight = "/images/mzansi-logo/squarelogo.PNG",
+  img = "/images/botswana-logo/squarelogo.PNG",
+  imgLight = "/images/botswana-logo/squarelogo.PNG",
   className = "h-12", // Use height instead of width for consistent sizing
 }) => {
   return (

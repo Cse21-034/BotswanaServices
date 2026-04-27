@@ -74,7 +74,7 @@ async function reverseGeocode(lat: number, lon: number): Promise<GeocodingResult
       `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`,
       {
         headers: {
-          "User-Agent": "MzansiServices-Weather/1.0",
+          "User-Agent": "BotswanaServices-Weather/1.0",
         },
       }
     );

@@ -151,7 +151,7 @@ const HeroSearchForm2Mobile = () => {
                                 {/* Location Search */}
                                 <div>
                                   <label className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">
-                                    Where in South Africa?
+                                    Where in Botswana?
                                   </label>
                                   <div className="relative">
                                     <MapPinIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-400" />

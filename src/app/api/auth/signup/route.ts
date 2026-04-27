@@ -40,7 +40,7 @@ export async function POST(req: Request) {
     try {
       await sendEmail({
         to: email,
-        subject: 'Welcome to Mzansi Services!',
+        subject: 'Welcome to Botswana Services!',
         react: UserWelcomeEmail({ userName: name, userEmail: email }),
       });
     } catch {}

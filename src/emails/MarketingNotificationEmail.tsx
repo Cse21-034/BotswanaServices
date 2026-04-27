@@ -35,13 +35,13 @@ export const MarketingNotificationEmail = ({
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12 }}>
             <Img
               src={`${process.env.NEXT_PUBLIC_APP_URL || 'https://namibiaservices.com'}/images/namibia-logo/logo-mobile.png`}
-              alt="Mzansi Services Logo"
+              alt="Botswana Services Logo"
               width="40"
               height="40"
               style={{ display: 'inline-block', verticalAlign: 'middle' }}
             />
             <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#1f2937', margin: 0, display: 'inline-block', verticalAlign: 'middle' }}>
-              Mzansi Services
+              Botswana Services
             </Text>
           </div>
         </Section>
@@ -103,7 +103,7 @@ export const MarketingNotificationEmail = ({
         </Section>
 
         <Section style={{ marginTop: 32, borderTop: '1px solid #e5e7eb', paddingTop: 16, textAlign: 'center', fontSize: 12, color: '#6b7280' }}>
-          <Text>© 2025 Mzansi Services. All rights reserved.</Text>
+          <Text>© 2025 Botswana Services. All rights reserved.</Text>
         </Section>
       </Container>
     </Body>

@@ -37,7 +37,7 @@ export async function PATCH(req: NextRequest, { params }: { params: { id: string
       if (newStatus === 'PUBLISHED') {
         await sendEmail({
           to: business.owner.email,
-          subject: `🎉 ${business.name} is now live on Mzansi Services!`,
+          subject: `🎉 ${business.name} is now live on Botswana Services!`,
           react: BusinessStatusEmail({ businessName: business.name, status: 'PUBLISHED' }),
         });
       } else if (newStatus === 'SUSPENDED') {
@@ -64,7 +64,7 @@ export async function PATCH(req: NextRequest, { params }: { params: { id: string
       const ownerRecord = await prisma.user.findFirst({ where: { businesses: { some: { id } } }, select: { id: true } });
       if (ownerRecord) {
         const notifMap: Record<string, { title: string; message: string }> = {
-          PUBLISHED: { title: '🎉 Business Approved!', message: `${business.name} is now live on Mzansi Services and visible to customers.` },
+          PUBLISHED: { title: '🎉 Business Approved!', message: `${business.name} is now live on Botswana Services and visible to customers.` },
           SUSPENDED: { title: '⚠️ Business Suspended', message: `${business.name} has been suspended. Please contact support.` },
           DRAFT: { title: 'Business Listing Update', message: `Your listing for ${business.name} requires attention. Check your email for details.` },
         };

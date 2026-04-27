@@ -94,7 +94,7 @@ const SectionGridCategoryBox: React.FC<PricingPackageProps> = ({
     <div className={`nc-SectionGridCategoryBox relative ${className}`}>
       <Heading
         isCenter={headingCenter}
-        desc="Choose the perfect plan to grow your business in South Africa"
+        desc="Choose the perfect plan to grow your business in Botswana"
       >
         Business Listing Packages
       </Heading>

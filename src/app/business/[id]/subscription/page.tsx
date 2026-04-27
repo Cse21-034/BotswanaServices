@@ -1,7 +1,7 @@
 import SubscriptionManagement from '@/app/subscription/SubscriptionManagement';
 
 export const metadata = {
-  title: 'Subscription Management | Mzansi Services',
+  title: 'Subscription Management | Botswana Services',
   description: 'Manage your subscription and view features',
 };
 

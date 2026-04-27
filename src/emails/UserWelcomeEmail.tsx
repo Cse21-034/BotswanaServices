@@ -12,11 +12,11 @@ export const UserWelcomeEmail = ({
 }: UserWelcomeEmailProps) => (
   <Html>
     <Head />
-    <Preview>Welcome to Mzansi Services — discover the best local businesses</Preview>
+    <Preview>Welcome to Botswana Services — discover the best local businesses</Preview>
     <Body style={{ backgroundColor: '#f9fafb', fontFamily: 'Arial, sans-serif', color: '#374151' }}>
       <Container style={{ maxWidth: 600, margin: '0 auto', background: '#fff', padding: 32, borderRadius: 12, border: '1px solid #e5e7eb' }}>
         <Section style={{ textAlign: 'center', marginBottom: 24 }}>
-          <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#1f2937', margin: 0 }}>Mzansi Services</Text>
+          <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#1f2937', margin: 0 }}>Botswana Services</Text>
         </Section>
 
         <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#059669', margin: '0 0 16px 0' }}>
@@ -24,7 +24,7 @@ export const UserWelcomeEmail = ({
         </Text>
 
         <Text style={{ fontSize: 16, margin: '0 0 16px 0' }}>
-          Your account has been created successfully. You can now browse, review, and bookmark the best businesses across South Africa.
+          Your account has been created successfully. You can now browse, review, and bookmark the best businesses across Botswana.
         </Text>
 
         <Section style={{ background: '#f0fdf4', border: '1px solid #bbf7d0', padding: 20, borderRadius: 8, margin: '24px 0' }}>
@@ -46,7 +46,7 @@ export const UserWelcomeEmail = ({
 
         <Text style={{ fontSize: 13, color: '#9ca3af', margin: '0 0 4px 0' }}>Signed in as: {userEmail}</Text>
         <Hr style={{ borderColor: '#e5e7eb', margin: '24px 0' }} />
-        <Text style={{ fontSize: 12, color: '#9ca3af', textAlign: 'center' as const }}>© 2025 Mzansi Services. All rights reserved.</Text>
+        <Text style={{ fontSize: 12, color: '#9ca3af', textAlign: 'center' as const }}>© 2025 Botswana Services. All rights reserved.</Text>
       </Container>
     </Body>
   </Html>

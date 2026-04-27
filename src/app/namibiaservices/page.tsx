@@ -856,7 +856,7 @@ const AdminDashboardPage: FC<AdminDashboardPageProps> = ({}) => {
             Admin Dashboard
           </h1>
           <p className="text-neutral-600 dark:text-neutral-400 mt-2 text-lg">
-            Manage Mzansi Services Directory
+            Manage Botswana Services Directory
           </p>
         </div>
 

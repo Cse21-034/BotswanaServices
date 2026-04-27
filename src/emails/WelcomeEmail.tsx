@@ -26,33 +26,33 @@ export const WelcomeEmail = ({
 }: WelcomeEmailProps) => (
   <Html>
     <Head />
-    <Preview>Welcome to Mzansi Services!</Preview>
+    <Preview>Welcome to Botswana Services!</Preview>
     <Body style={{ backgroundColor: '#f9fafb', fontFamily: 'Arial, sans-serif', color: '#374151' }}>
       <Container style={{ maxWidth: 600, margin: '0 auto', background: '#fff', padding: 32, borderRadius: 12, border: '1px solid #e5e7eb' }}>
         <Section style={{ textAlign: 'center', marginBottom: 24 }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12 }}>
             <Img
               src={`${process.env.NEXT_PUBLIC_APP_URL || 'https://namibiaservices.com'}/images/namibia-logo/logo-mobile.png`}
-              alt="Mzansi Services Logo"
+              alt="Botswana Services Logo"
               width="40"
               height="40"
               style={{ display: 'inline-block', verticalAlign: 'middle' }}
             />
             <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#1f2937', margin: 0, display: 'inline-block', verticalAlign: 'middle' }}>
-              Mzansi Services
+              Botswana Services
             </Text>
           </div>
         </Section>
 
         <Section>
           <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#059669', margin: '8px 0' }}>
-            Welcome to Mzansi Services!
+            Welcome to Botswana Services!
           </Text>
           <Text style={{ fontSize: 16, margin: '16px 0' }}>
             Hello <strong>{businessName}</strong>,
           </Text>
           <Text style={{ fontSize: 16, margin: '16px 0' }}>
-            Congratulations! Your business account has been successfully created on Mzansi Services. We're excited to help you connect with customers and grow your business.
+            Congratulations! Your business account has been successfully created on Botswana Services. We're excited to help you connect with customers and grow your business.
           </Text>
 
           <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#1f2937', margin: '24px 0 12px 0' }}>
@@ -104,7 +104,7 @@ export const WelcomeEmail = ({
         </Section>
 
         <Section style={{ marginTop: 32, borderTop: '1px solid #e5e7eb', paddingTop: 16, textAlign: 'center', fontSize: 12, color: '#6b7280' }}>
-          <Text>© 2025 Mzansi Services. All rights reserved.</Text>
+          <Text>© 2025 Botswana Services. All rights reserved.</Text>
           <Text>This is an automated message, please do not reply to this email.</Text>
         </Section>
       </Container>

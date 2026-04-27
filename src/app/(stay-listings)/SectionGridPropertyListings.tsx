@@ -105,7 +105,7 @@ const SectionGridPropertyListings: FC<SectionGridPropertyListingsProps> = ({
           Property Listings
         </h1>
         <p className="text-base lg:text-lg text-gray-600 dark:text-gray-300 max-w-2xl">
-          Discover premium rental properties and accommodations across South Africa
+          Discover premium rental properties and accommodations across Botswana
         </p>
       </div>
 

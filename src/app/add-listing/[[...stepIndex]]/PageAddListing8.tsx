@@ -30,7 +30,7 @@ const PageAddListing8: FC<PageAddListing8Props> = () => {
             <option value="">Select currency</option>
             <option value="USD">USD (US Dollar)</option>
             <option value="BWP">BWP (Botswana Pula)</option>
-            <option value="ZAR">ZAR (South African Rand)</option>
+            <option value="ZAR">ZAR (Botswanan Rand)</option>
             <option value="EUR">EUR (Euro)</option>
             <option value="GBP">GBP (British Pound)</option>
             <option value="NAD">NAD (Namibian Dollar)</option>

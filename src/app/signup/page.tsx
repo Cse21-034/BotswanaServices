@@ -174,7 +174,7 @@ const PageSignUp: FC<PageSignUpProps> = ({}) => {
             )}
           </div>
           <h1 className="text-4xl lg:text-5xl font-bold text-neutral-900 dark:text-neutral-100 mb-4">
-            {userType === "business" ? "Register Your Business" : "Join Mzansi Services"}
+            {userType === "business" ? "Register Your Business" : "Join Botswana Services"}
           </h1>
           <p className="text-xl text-neutral-600 dark:text-neutral-400">
             {userType === "business" ? "Create your business account" : "Create your personal account"}

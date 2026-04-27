@@ -9,11 +9,11 @@ interface FAQItem {
 
 const faqData: FAQItem[] = [
     {
-        question: "What is Mzansi Services™?",
-        answer: "Mzansi Services is an online marketplace for specialised traders to BUY and SELL products and services and BID for new business opportunities to increase your revenue."
+        question: "What is Botswana Services™?",
+        answer: "Botswana Services is an online marketplace for specialised traders to BUY and SELL products and services and BID for new business opportunities to increase your revenue."
     },
     {
-        question: "Who owns Mzansi Services™?",
+        question: "Who owns Botswana Services™?",
         answer: "By Solidcare Services (Pty) Ltd"
     },
     {
@@ -21,8 +21,8 @@ const faqData: FAQItem[] = [
         answer: "Business owners can set up their own eCommerce storefront to sell their services and products to consumers and other businesses. Consumers can find business in their area, request a quotation and book an appointment for the services. You can also chat with the business owners."
     },
     {
-        question: "What is selling services on Mzansi Services™?",
-        answer: "With Selling Services on Mzansi Services, you can list the services you offer, define these services, add call-out and labour fees. All of this is to assist the consumer to make an informed decision when choosing your offering."
+        question: "What is selling services on Botswana Services™?",
+        answer: "With Selling Services on Botswana Services, you can list the services you offer, define these services, add call-out and labour fees. All of this is to assist the consumer to make an informed decision when choosing your offering."
     },
     {
         question: "How do I get a quotation?",
@@ -34,11 +34,11 @@ const faqData: FAQItem[] = [
     },
     {
         question: "Does my premium listing rank my business high?",
-        answer: "There are many businesses listed on Mzansi Services™ with premium listings, therefore, we do not guarantee your business will rank high."
+        answer: "There are many businesses listed on Botswana Services™ with premium listings, therefore, we do not guarantee your business will rank high."
     },
     {
         question: "Do I get charged for requesting a quote on the platform?",
-        answer: "Requesting a quote is free on the Mzansi Services™ platform. However, some service providers do charge a service or call-out fee, so as a consumer, you need to ask the prospective service provider about their policy."
+        answer: "Requesting a quote is free on the Botswana Services™ platform. However, some service providers do charge a service or call-out fee, so as a consumer, you need to ask the prospective service provider about their policy."
     },
     {
         question: "How do service providers accept payments?",
@@ -46,23 +46,23 @@ const faqData: FAQItem[] = [
     },
     {
         question: "How do I know that my quote request has been received?",
-        answer: "You'll receive a notification in your Mzansi Services™ Chat confirming that the vendor has seen your request. Then an interested vendor will contact you to discuss the details of your request."
+        answer: "You'll receive a notification in your Botswana Services™ Chat confirming that the vendor has seen your request. Then an interested vendor will contact you to discuss the details of your request."
     },
     {
         question: "How do I cancel my quote request?",
-        answer: "Once you have submitted the quote request the vendor will be notified. You can let the vendor know of your wish to cancel the request via the Mzansi Services™ Chat."
+        answer: "Once you have submitted the quote request the vendor will be notified. You can let the vendor know of your wish to cancel the request via the Botswana Services™ Chat."
     },
     {
         question: "How do I know the vendors are trustworthy?",
-        answer: "We cannot guarantee or be held liable for any misfortunes. Mzansi Services™ businesses are verified either by their registration number or national ID. Verified businesses have a blue tick next to their logo. Also, please refer to the store reviews for better dealing with the business."
+        answer: "We cannot guarantee or be held liable for any misfortunes. Botswana Services™ businesses are verified either by their registration number or national ID. Verified businesses have a blue tick next to their logo. Also, please refer to the store reviews for better dealing with the business."
     },
     {
-        question: "How much does it cost to register on Mzansi Services™?",
-        answer: "There are various advertising solutions available at Mzansi Services™ at a fairly reasonable cost. Click here to learn more."
+        question: "How much does it cost to register on Botswana Services™?",
+        answer: "There are various advertising solutions available at Botswana Services™ at a fairly reasonable cost. Click here to learn more."
     },
     {
         question: "Is it possible to pay once-off annually versus monthly?",
-        answer: "Yes, arrangements can be made and the payment options are available on the Mzansi Services™ platform. The once-off annual payment would grant you eligibility for a discount."
+        answer: "Yes, arrangements can be made and the payment options are available on the Botswana Services™ platform. The once-off annual payment would grant you eligibility for a discount."
     },
     {
         question: "Are there more payment options?",
@@ -70,11 +70,11 @@ const faqData: FAQItem[] = [
     },
     {
         question: "What happens when the vendors are unresponsive?",
-        answer: "You will need to follow up with the vendor by calling or contacting Mzansi Services™ support for assistance via email: support@mzansiservices.co.za"
+        answer: "You will need to follow up with the vendor by calling or contacting Botswana Services™ support for assistance via email: support@botswanaservices.co.bw"
     },
     {
         question: "If I see a business listing that I think is spam, offensive or illegal, what do I do?",
-        answer: "You are welcome to report that listing to us by sending an email to: support@mzansiservices.co.za"
+        answer: "You are welcome to report that listing to us by sending an email to: support@botswanaservices.co.bw"
     }
 ];
 
@@ -95,7 +95,7 @@ const FAQSection: FC<FAQSectionProps> = ({ className = "" }) => {
                 {/* Header */}
                 <div className="text-center max-w-3xl mx-auto mb-12">
                     <h2 className="font-bold text-4xl md:text-5xl mb-4">
-                        Mzansi Services™
+                        Botswana Services™
                         <br />
                         <span className="text-burgundy-600">Frequently Asked Questions</span>
                     </h2>

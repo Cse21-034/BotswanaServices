@@ -109,7 +109,7 @@ const NavMobile: React.FC<NavMobileProps> = ({
         <Logo />
         <div className="flex flex-col mt-5 text-neutral-700 dark:text-neutral-300 text-sm">
           <span>
-            Discover South Africa's best services and businesses at your finger tips
+            Discover Botswana's best services and businesses at your finger tips
           </span>
 
           <div className="flex justify-between items-center mt-4">

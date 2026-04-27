@@ -53,10 +53,10 @@ export default function SubscriptionPage() {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-            Grow Your Business with Mzansi Services
+            Grow Your Business with Botswana Services
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300">
-            Choose the perfect subscription plan to unlock powerful features and reach more customers across South Africa.
+            Choose the perfect subscription plan to unlock powerful features and reach more customers across Botswana.
           </p>
         </div>
 

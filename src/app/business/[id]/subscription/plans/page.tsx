@@ -1,7 +1,7 @@
 import SubscriptionPlans from '@/app/subscription/SubscriptionPlans';
 
 export const metadata = {
-  title: 'Subscription Plans | Mzansi Services',
+  title: 'Subscription Plans | Botswana Services',
   description: 'Choose the perfect plan for your business',
 };
 

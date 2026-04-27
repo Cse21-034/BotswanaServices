@@ -124,11 +124,11 @@ const BusinessSearchForm = () => {
             onClick={() => setFieldNameShow("location")}
           >
             <span className="text-neutral-400">Where?</span>
-            <span>{locationInput || "Any location in South Africa"}</span>
+            <span>{locationInput || "Any location in Botswana"}</span>
           </button>
         ) : (
           <LocationInput
-            headingText="Where in South Africa?"
+            headingText="Where in Botswana?"
             defaultValue={locationInput}
             onChange={(value) => {
               setLocationInput(value);

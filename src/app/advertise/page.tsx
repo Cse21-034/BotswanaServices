@@ -623,7 +623,7 @@ const AdvertiseWithUsPage: FC = () => {
       {/* Header */}
       <div className="container text-center mb-16">
         <h1 className="text-4xl lg:text-5xl font-bold text-neutral-900 dark:text-neutral-100 mb-4">
-          Mzansi Services
+          Botswana Services
         </h1>
         <h2 className="text-2xl lg:text-3xl font-semibold mb-2" style={{ color: brandColors.primary }}>
           Beyond Excellence
@@ -644,9 +644,9 @@ const AdvertiseWithUsPage: FC = () => {
           colorType="primary"
         />
 
-        {/* Mzansi Services Packages */}
+        {/* Botswana Services Packages */}
         <ServiceSection
-          title="Mzansi Services Packages"
+          title="Botswana Services Packages"
           description="Choose the perfect plan for your business and unlock powerful features"
           packages={namibiaServicesPackages}
           icon={BuildingStorefrontIcon}

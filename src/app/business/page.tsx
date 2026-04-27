@@ -178,7 +178,7 @@ export interface BusinessDashboardPageProps { }
 const BusinessDashboardPage: FC<BusinessDashboardPageProps> = ({ }) => {
   const [activeTab, setActiveTab] = useState("overview");
   const [subscriptionTier, setSubscriptionTier] = useState<string | null>(null);
-  const [country, setCountry] = useState<string>("South Africa");
+  const [country, setCountry] = useState<string>("Botswana");
   const [city, setCity] = useState<Option | null>(null);
   const [streetName, setStreetName] = useState("");
   const [plotNumber, setPlotNumber] = useState("");
@@ -234,7 +234,7 @@ const BusinessDashboardPage: FC<BusinessDashboardPageProps> = ({ }) => {
     youtube: "",
     address: "",
     establishedYear: "",
-    country: "South Africa",
+    country: "Botswana",
     city: "",
     streetName: "",
     plotNumber: "",

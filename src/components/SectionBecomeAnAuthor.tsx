@@ -24,7 +24,7 @@ const SectionClaimListing: FC<SectionClaimListingProps> = ({
         body: JSON.stringify({
           type: "marketing",
           businessName: "New Business Inquiry - Listing Claim",
-          businessOwnerEmail: "inquiry@mzansiservices.co.za",
+          businessOwnerEmail: "inquiry@botswanaservices.co.bw",
           businessCategory: "Pending Registration",
         }),
       });
@@ -48,7 +48,7 @@ const SectionClaimListing: FC<SectionClaimListingProps> = ({
           Claim Your Business Listing
         </h2>
         <span className="block mt-6 text-neutral-500 dark:text-neutral-400">
-          Take control of your business profile! Verify ownership and unlock powerful tools to manage your online presence, respond to reviews, update information, and attract more customers in South Africa.
+          Take control of your business profile! Verify ownership and unlock powerful tools to manage your online presence, respond to reviews, update information, and attract more customers in Botswana.
         </span>
 
         <div className="mt-8 space-y-4">

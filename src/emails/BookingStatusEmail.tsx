@@ -67,7 +67,7 @@ export const BookingStatusEmail = ({
       <Body style={{ backgroundColor: '#f9fafb', fontFamily: 'Arial, sans-serif', color: '#374151' }}>
         <Container style={{ maxWidth: 600, margin: '0 auto', background: '#fff', padding: 32, borderRadius: 12, border: '1px solid #e5e7eb' }}>
           <Section style={{ textAlign: 'center', marginBottom: 24 }}>
-            <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#1f2937', margin: 0 }}>Mzansi Services</Text>
+            <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#1f2937', margin: 0 }}>Botswana Services</Text>
           </Section>
 
           <Text style={{ fontSize: 22, fontWeight: 'bold', color: cfg.color, margin: '0 0 8px 0' }}>
@@ -109,7 +109,7 @@ export const BookingStatusEmail = ({
           )}
 
           <Hr style={{ borderColor: '#e5e7eb', margin: '24px 0' }} />
-          <Text style={{ fontSize: 12, color: '#9ca3af', textAlign: 'center' as const }}>© 2025 Mzansi Services. All rights reserved.</Text>
+          <Text style={{ fontSize: 12, color: '#9ca3af', textAlign: 'center' as const }}>© 2025 Botswana Services. All rights reserved.</Text>
         </Container>
       </Body>
     </Html>
