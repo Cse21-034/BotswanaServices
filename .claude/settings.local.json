@@ -2,7 +2,11 @@
   "permissions": {
     "allow": [
       "Bash(grep -E \"^-.*\\\\.\\(md|ts|js|json\\)$\")",
-      "Bash(git commit -m ' *)"
+      "Bash(git commit -m ' *)",
+      "PowerShell(powershell -ExecutionPolicy Bypass -File \"c:\\\\Users\\\\mosim\\\\OneDrive\\\\Desktop\\\\NamibiaServices-main\\\\fix_emojis.ps1\")",
+      "PowerShell(python \"c:\\\\Users\\\\mosim\\\\OneDrive\\\\Desktop\\\\NamibiaServices-main\\\\fix_emojis.py\")",
+      "Bash(dir \"c:\\\\Users\\\\mosim\\\\OneDrive\\\\Desktop\\\\NamibiaServices-main\\\\public\\\\images\")",
+      "PowerShell(New-Item -ItemType Directory -Path \"c:\\\\Users\\\\mosim\\\\OneDrive\\\\Desktop\\\\NamibiaServices-main\\\\public\\\\images\\\\ads\" -Force)"
     ]
   }
 }
