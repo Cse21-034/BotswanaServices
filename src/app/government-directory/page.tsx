@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useMemo } from "react";
-import { namibiaDirectory, DirectoryEntry, getDirectoryByType } from "@/data/govementdirectory";
+import { botswanaDirectory as namibiaDirectory, DirectoryEntry, getDirectoryByType } from "@/data/govementdirectory";
 import GovernmentDirectoryCard from "@/components/GovernmentDirectoryCard";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
