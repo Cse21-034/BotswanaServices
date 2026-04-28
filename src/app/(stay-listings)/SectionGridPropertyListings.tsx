@@ -145,13 +145,14 @@ const SectionGridPropertyListings: FC<SectionGridPropertyListingsProps> = ({
               className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-neutral-800 focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:text-white"
             >
               <option value="">All Cities</option>
-              <option value="Windhoek">Windhoek</option>
-              <option value="Walvis Bay">Walvis Bay</option>
-              <option value="Swakopmund">Swakopmund</option>
-              <option value="Oshakati">Oshakati</option>
-              <option value="Rundu">Rundu</option>
-              <option value="Otjiwarongo">Otjiwarongo</option>
-              <option value="Gobabis">Gobabis</option>
+              <option value="Gaborone">Gaborone</option>
+              <option value="Francistown">Francistown</option>
+              <option value="Maun">Maun</option>
+              <option value="Serowe">Serowe</option>
+              <option value="Lobatse">Lobatse</option>
+              <option value="Selebi-Phikwe">Selebi-Phikwe</option>
+              <option value="Kasane">Kasane</option>
+              <option value="Jwaneng">Jwaneng</option>
             </select>
           </div>
         </div>

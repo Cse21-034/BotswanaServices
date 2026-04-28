@@ -10,14 +10,19 @@ import { authOptions } from "@/lib/auth"; // Adjust path if needed
 
 const ListingsPage = async () => {
   const session = await getServerSession(authOptions);
-  const listings = await prisma.listing.findMany({
-    where: {
-      status: "ACTIVE", // Only show active general listings
-    },
-    include: {
-      business: true,
-    },
-  });
+  let listings: any[] = [];
+  try {
+    listings = await prisma.listing.findMany({
+      where: {
+        status: "ACTIVE",
+      },
+      include: {
+        business: true,
+      },
+    });
+  } catch (e) {
+    console.error("Failed to fetch listings:", e);
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-950">
