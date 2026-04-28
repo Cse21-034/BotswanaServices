@@ -281,7 +281,20 @@ export const botswanaDirectory: DirectoryEntry[] = [
     type: "parastatal"
   },
   {
-    name: "Botswana Export Development and Investment Authority (BEDIA)",
+    name: "Botswana Building Society (BBS)",
+    address: "BBS House, Plot 1073, Haile Selassie Road, The Mall",
+    poBox: "P.O. Box 40",
+    city: "Gaborone",
+    country: "Botswana",
+    phone: "+267 395 1576",
+    fax: "+267 395 1279",
+    email: "info@bbs.bw",
+    website: "www.bbs.bw",
+    image: "/images/parastatalslogos/bbs logo.png",
+    type: "parastatal"
+  },
+  {
+    name: "Botswana Investment & Trade Centre (BITC)",
     address: "Plot 54351, Exponential Building, next to Masa Centre, at the Central Business District (CBD)",
     poBox: "Private Bag 00445",
     city: "Gaborone",
@@ -289,7 +302,21 @@ export const botswanaDirectory: DirectoryEntry[] = [
     phone: "+267 363 3300",
     fax: "+267 317 0452",
     email: "enquiries@bitc.co.bw",
-    website: "www.bedia.co.bw",
+    website: "www.bitc.co.bw",
+    image: "/images/parastatalslogos/bitc logo.png",
+    type: "parastatal"
+  },
+  {
+    name: "Botswana Housing Corporation (BHC)",
+    address: "Plot 1117, Boiteko Junction, Off Notwane Road",
+    poBox: "Private Bag 0056",
+    city: "Gaborone",
+    country: "Botswana",
+    phone: "+267 360 5100",
+    fax: "+267 390 5914",
+    email: "bhc@bhc.bw",
+    website: "www.bhc.bw",
+    image: "/images/parastatalslogos/bhc logo.jpg",
     type: "parastatal"
   },
   {
@@ -383,6 +410,33 @@ export const botswanaDirectory: DirectoryEntry[] = [
     fax: "+267 318 0175",
     image: "/images/parastatalslogos/botswana stock exchange.png",
     type: "parastatal"
+  },
+  {
+    name: "Botswana Post",
+    address: "Post Office Building, The Mall",
+    poBox: "Private Bag 00300",
+    city: "Gaborone",
+    country: "Botswana",
+    phone: "+267 368 1500",
+    fax: "+267 395 4423",
+    email: "info@botswanapost.bw",
+    website: "www.botswanapost.bw",
+    image: "/images/parastatalslogos/botswana post logo.png",
+    type: "parastatal"
+  },
+  {
+    name: "Botswana Power Corporation (BPC)",
+    address: "Motlakase House, Macheng Way",
+    poBox: "P.O. Box 48",
+    city: "Gaborone",
+    country: "Botswana",
+    phone: "+267 360 6000",
+    fax: "+267 397 2738",
+    tollfree: "0800 600 666",
+    email: "info@bpc.bw",
+    website: "www.bpc.bw",
+    image: "/images/parastatalslogos/bpc logo.png",
+    type: "utility"
   },
   {
     name: "Botswana Technology Centre (BOTEC)",
@@ -753,6 +807,7 @@ export const botswanaDirectory: DirectoryEntry[] = [
     fax: "+267 533 0484",
     tollfree: "0800 600 876",
     website: "www.gov.bw",
+    image: "/images/LogosCouncil/GoodHope.jpg",
     type: "local_authority"
   },
   {
@@ -790,6 +845,7 @@ export const botswanaDirectory: DirectoryEntry[] = [
     phone: "+267 261 0570",
     tollfree: "0800 600 746",
     website: "www.gov.bw",
+    image: "/images/LogosCouncil/SPTC.jpg",
     type: "local_authority"
   },
   {
@@ -802,6 +858,7 @@ export const botswanaDirectory: DirectoryEntry[] = [
     fax: "+267 539 0201",
     tollfree: "0800 600 795",
     website: "www.gov.bw",
+    image: "/images/LogosCouncil/Tlokweng.jpg",
     type: "local_authority"
   },
   {
@@ -838,7 +895,22 @@ export const botswanaDirectory: DirectoryEntry[] = [
     fax: "+267 397 4802",
     email: "sales@airbotswana.co.bw",
     website: "www.airbotswana.co.bw",
+    image: "/images/parastatalslogos/air botswana logo.png",
     type: "parastatal"
+  },
+  {
+    name: "Water Utilities Corporation (WUC)",
+    address: "1 Limpopo Drive, Gaborone West Industrial",
+    poBox: "Private Bag 00276",
+    city: "Gaborone",
+    country: "Botswana",
+    phone: "+267 360 4400",
+    fax: "+267 390 5365",
+    tollfree: "0800 600 500",
+    email: "wuc@wuc.bw",
+    website: "www.wuc.bw",
+    image: "/images/parastatalslogos/wuc logo.png",
+    type: "utility"
   }
 ];
 
