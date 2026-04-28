@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React, { useState, useEffect } from 'react';
 import { useSession } from 'next-auth/react';
@@ -191,7 +191,7 @@ const SubscriptionPlans: React.FC<SubscriptionPlansProps> = ({ businessId }) => 
 
   const tiers = getAllTiers();
 
-  // Full feature matrix — each entry defines per-tier availability
+  // Full feature matrix â€” each entry defines per-tier availability
   const featureMatrix = [
     {
       label: 'Basic business profile',
@@ -260,7 +260,7 @@ const SubscriptionPlans: React.FC<SubscriptionPlansProps> = ({ businessId }) => 
       DESERT_LIONS: true,
     },
     {
-      label: `Product/service listings (${SUBSCRIPTION_TIERS.WILD_HORSES.limits.listings} / ${SUBSCRIPTION_TIERS.DESERT_ELEPHANTS.limits.listings} / ∞)`,
+      label: `Product/service listings (${SUBSCRIPTION_TIERS.WILD_HORSES.limits.listings} / ${SUBSCRIPTION_TIERS.DESERT_ELEPHANTS.limits.listings} / âˆž)`,
       WILD_HORSES: true,
       DESERT_ELEPHANTS: true,
       DESERT_LIONS: true,
@@ -349,7 +349,7 @@ const SubscriptionPlans: React.FC<SubscriptionPlansProps> = ({ businessId }) => 
         {/* Annual billing notice */}
         <div className="flex items-center justify-center mb-10">
           <span className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-sm font-semibold px-4 py-2 rounded-full">
-            Annual billing — pay once, covered for the whole year
+            Annual billing â€” pay once, covered for the whole year
           </span>
         </div>
 
@@ -394,7 +394,7 @@ const SubscriptionPlans: React.FC<SubscriptionPlansProps> = ({ businessId }) => 
                     <span className="text-4xl font-bold text-gray-900 dark:text-white">FREE</span>
                   ) : (
                     <div className="flex items-baseline gap-2">
-                      <span className="text-4xl font-bold text-gray-900 dark:text-white">N${tier.yearlyPrice.toFixed(2)}</span>
+                      <span className="text-4xl font-bold text-gray-900 dark:text-white">BWP {tier.yearlyPrice.toFixed(2)}</span>
                       <span className="text-gray-500 dark:text-gray-400 text-sm">/year</span>
                     </div>
                   )}
@@ -408,7 +408,7 @@ const SubscriptionPlans: React.FC<SubscriptionPlansProps> = ({ businessId }) => 
                   </div>
                   <div className="bg-gray-50 dark:bg-slate-700 rounded-lg p-2 text-center">
                     <p className="text-gray-500 dark:text-gray-400 text-xs">Listings</p>
-                    <p className="text-base font-bold text-gray-900 dark:text-white">{tier.limits.listings >= 999 ? '∞' : tier.limits.listings}</p>
+                    <p className="text-base font-bold text-gray-900 dark:text-white">{tier.limits.listings >= 999 ? 'âˆž' : tier.limits.listings}</p>
                   </div>
                   <div className="bg-gray-50 dark:bg-slate-700 rounded-lg p-2 text-center">
                     <p className="text-gray-500 dark:text-gray-400 text-xs">Promos/mo</p>

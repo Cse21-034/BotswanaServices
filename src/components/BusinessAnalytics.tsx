@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React, { useState, useEffect } from 'react';
 import {
@@ -66,7 +66,7 @@ const BusinessAnalytics: React.FC<BusinessAnalyticsProps> = ({ businessId }) => 
         <h2 className="text-xl font-bold text-neutral-900 dark:text-white mb-4">Overview</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           <StatCard icon={EyeIcon} label="Total Profile Views" value={overview.totalViews.toLocaleString()} color="bg-blue-500" />
-          <StatCard icon={StarIcon} label="Average Rating" value={overview.averageRating || '—'} sub={`from ${overview.totalReviews} reviews`} color="bg-amber-500" />
+          <StatCard icon={StarIcon} label="Average Rating" value={overview.averageRating || 'â€”'} sub={`from ${overview.totalReviews} reviews`} color="bg-amber-500" />
           <StatCard icon={ChatBubbleLeftIcon} label="Total Reviews" value={overview.totalReviews} color="bg-green-500" />
           <StatCard icon={CameraIcon} label="Photos" value={overview.totalPhotos} color="bg-purple-500" />
           <StatCard icon={DocumentTextIcon} label="Listings" value={overview.totalListings} color="bg-indigo-500" />
@@ -95,7 +95,7 @@ const BusinessAnalytics: React.FC<BusinessAnalyticsProps> = ({ businessId }) => 
           <div>
             <p className="text-sm text-neutral-500 dark:text-neutral-400">Total Paid</p>
             <p className="text-lg font-bold text-neutral-900 dark:text-white">
-              {subscription.totalPaid > 0 ? `N$${subscription.totalPaid.toLocaleString()}` : '—'}
+              {subscription.totalPaid > 0 ? `BWP ${subscription.totalPaid.toLocaleString()}` : 'â€”'}
             </p>
           </div>
           <div>
@@ -129,8 +129,8 @@ const BusinessAnalytics: React.FC<BusinessAnalyticsProps> = ({ businessId }) => 
               <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
               <XAxis dataKey="month" tick={{ fontSize: 12 }} />
               <YAxis tick={{ fontSize: 12 }} />
-              <Tooltip formatter={(v) => `N$${v}`} />
-              <Line type="monotone" dataKey="amount" stroke="#6366f1" strokeWidth={2} dot={{ r: 4 }} name="Amount (N$)" />
+              <Tooltip formatter={(v) => `BWP ${v}`} />
+              <Line type="monotone" dataKey="amount" stroke="#6366f1" strokeWidth={2} dot={{ r: 4 }} name="Amount (BWP )" />
             </LineChart>
           </ResponsiveContainer>
         </div>
@@ -142,7 +142,7 @@ const BusinessAnalytics: React.FC<BusinessAnalyticsProps> = ({ businessId }) => 
         <div className="space-y-3">
           {ratingDistribution.map((r: any) => (
             <div key={r.star} className="flex items-center gap-3">
-              <span className="text-sm font-medium w-12 text-neutral-700 dark:text-neutral-300">{r.star} ★</span>
+              <span className="text-sm font-medium w-12 text-neutral-700 dark:text-neutral-300">{r.star} â˜…</span>
               <div className="flex-1 bg-neutral-100 dark:bg-neutral-700 rounded-full h-3 overflow-hidden">
                 <div
                   className="h-full bg-amber-400 rounded-full transition-all"
@@ -168,7 +168,7 @@ const BusinessAnalytics: React.FC<BusinessAnalyticsProps> = ({ businessId }) => 
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 mb-1">
                     <span className="text-sm font-semibold text-neutral-900 dark:text-white">{review.reviewerName}</span>
-                    <span className="text-amber-400 text-sm">{'★'.repeat(review.rating)}</span>
+                    <span className="text-amber-400 text-sm">{'â˜…'.repeat(review.rating)}</span>
                     <span className="text-xs text-neutral-400 ml-auto">
                       {new Date(review.date).toLocaleDateString('en-NA', { day: 'numeric', month: 'short', year: 'numeric' })}
                     </span>

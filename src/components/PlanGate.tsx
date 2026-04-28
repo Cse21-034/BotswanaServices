@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import Link from "next/link";
@@ -20,8 +20,8 @@ const TIER_LABELS: Record<Tier, string> = {
 
 const TIER_PRICES: Record<Tier, string> = {
   WILD_HORSES: "Free",
-  DESERT_ELEPHANTS: "N$100/month",
-  DESERT_LIONS: "N$250/month",
+  DESERT_ELEPHANTS: "BWP 100/month",
+  DESERT_LIONS: "BWP 250/month",
 };
 
 interface PlanGateProps {
@@ -76,7 +76,7 @@ const PlanGate: React.FC<PlanGateProps> = ({
           <div className="inline-flex items-center gap-2 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 rounded-full px-4 py-2 mb-6">
             <SparklesIcon className="w-4 h-4 text-amber-600 dark:text-amber-400" />
             <span className="text-sm font-semibold text-amber-700 dark:text-amber-300">
-              Requires {TIER_LABELS[requiredTier]} — {TIER_PRICES[requiredTier]}
+              Requires {TIER_LABELS[requiredTier]} â€” {TIER_PRICES[requiredTier]}
             </span>
           </div>
 
@@ -90,7 +90,7 @@ const PlanGate: React.FC<PlanGateProps> = ({
             href={`/business/${businessId}/subscription/plans`}
             className="block w-full py-3 px-6 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold rounded-xl transition-all shadow-md hover:shadow-lg text-sm"
           >
-            Upgrade Now →
+            Upgrade Now â†’
           </Link>
 
           <Link

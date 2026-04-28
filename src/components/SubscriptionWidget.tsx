@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React, { useState, useEffect } from 'react';
 import { useSession } from 'next-auth/react';
@@ -75,12 +75,12 @@ const SubscriptionWidget: React.FC<SubscriptionWidgetProps> = ({
             </p>
             {subscription?.tier !== 'WILD_HORSES' && (
               <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                N${tierInfo.monthlyPrice}/month
+                BWP {tierInfo.monthlyPrice}/month
               </p>
             )}
             {hasPendingUpgrade && pendingPlanName && (
               <p className="text-xs text-amber-600 dark:text-amber-400 mt-1">
-                ⏳ Upgrade to {pendingPlanName} pending payment
+                â³ Upgrade to {pendingPlanName} pending payment
               </p>
             )}
           </div>
@@ -88,7 +88,7 @@ const SubscriptionWidget: React.FC<SubscriptionWidgetProps> = ({
             href={`/business/${businessId}/subscription/plans`}
             className="inline-flex items-center gap-1 px-4 py-2 bg-burgundy-600 hover:bg-burgundy-700 text-white text-sm font-semibold rounded-lg transition-colors"
           >
-            Upgrade →
+            Upgrade â†’
           </Link>
         </div>
       </div>
@@ -109,26 +109,26 @@ const SubscriptionWidget: React.FC<SubscriptionWidgetProps> = ({
           <div>
             <h3 className="text-lg font-semibold mb-1">
               {
-                subscription?.tier === 'WILD_HORSES' && '🐴'
+                subscription?.tier === 'WILD_HORSES' && 'ðŸ´'
               }
               {
-                subscription?.tier === 'DESERT_ELEPHANTS' && '🐘'
+                subscription?.tier === 'DESERT_ELEPHANTS' && 'ðŸ˜'
               }
               {
-                subscription?.tier === 'DESERT_LIONS' && '🦁'
+                subscription?.tier === 'DESERT_LIONS' && 'ðŸ¦'
               }
               {' '}{tierInfo.name}
             </h3>
             <p className="text-sm text-gray-100">Your current subscription plan</p>
             {hasPendingUpgrade && pendingPlanName && (
               <p className="text-xs text-amber-200 mt-1">
-                ⏳ Upgrade to {pendingPlanName} pending payment confirmation
+                â³ Upgrade to {pendingPlanName} pending payment confirmation
               </p>
             )}
           </div>
           {subscription?.status === 'ACTIVE' && (
             <span className="bg-white text-green-600 px-3 py-1 rounded-full text-xs font-semibold">
-              ✓ Active
+              âœ“ Active
             </span>
           )}
         </div>
@@ -143,7 +143,7 @@ const SubscriptionWidget: React.FC<SubscriptionWidgetProps> = ({
               Monthly Cost
             </p>
             <p className="text-2xl font-bold text-gray-900 dark:text-white">
-              N${tierInfo.monthlyPrice}
+              BWP {tierInfo.monthlyPrice}
               <span className="text-sm text-gray-600 dark:text-gray-400 ml-1">
                 per month
               </span>
@@ -162,7 +162,7 @@ const SubscriptionWidget: React.FC<SubscriptionWidgetProps> = ({
                 key={idx}
                 className="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300"
               >
-                <span className="text-green-600 mt-0.5">✓</span>
+                <span className="text-green-600 mt-0.5">âœ“</span>
                 <span>{feature}</span>
               </li>
             ))}
@@ -185,7 +185,7 @@ const SubscriptionWidget: React.FC<SubscriptionWidgetProps> = ({
           <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-3 text-center">
             <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">Listings</p>
             <p className="text-2xl font-bold text-gray-900 dark:text-white">
-              {(tierInfo.limits.listings as number) >= 999 ? '∞' : tierInfo.limits.listings}
+              {(tierInfo.limits.listings as number) >= 999 ? 'âˆž' : tierInfo.limits.listings}
             </p>
           </div>
           <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-3 text-center">

@@ -85,7 +85,7 @@ const defaultFormData: ListingFormData = {
   features: [],
   rules: "",
   images: [],
-  currency: "USD",
+  currency: "BWP",
   pricePerNight: 0,
   weekendPrice: 0,
   monthlyDiscount: 0,

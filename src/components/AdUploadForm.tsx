@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState } from 'react';
 import Image from 'next/image';
@@ -191,7 +191,7 @@ export function AdUploadForm({
 
       const initiateData = await initiateResponse.json();
       const payRequestId = initiateData.payRequestId;
-      console.log('[ProceedToPayment] ✅ Got PAY_REQUEST_ID:', payRequestId);
+      console.log('[ProceedToPayment] âœ… Got PAY_REQUEST_ID:', payRequestId);
 
       // Step 2: Get process.trans parameters
       console.log('[ProceedToPayment] Step 2: Calling /api/advertising/process');
@@ -210,7 +210,7 @@ export function AdUploadForm({
       }
 
       const processData = await processResponse.json();
-      console.log('[ProceedToPayment] ✅ Got process parameters');
+      console.log('[ProceedToPayment] âœ… Got process parameters');
 
       // Step 3: Auto-submit form to PayGate's process.trans
       console.log('[ProceedToPayment] Step 3: Submitting to process.trans');
@@ -291,7 +291,7 @@ export function AdUploadForm({
             </div>
             <div className="flex justify-between border-t pt-2 mt-2">
               <span>Total Amount:</span>
-              <span className="font-bold text-lg">N${packagePrice.toFixed(2)}</span>
+              <span className="font-bold text-lg">BWP {packagePrice.toFixed(2)}</span>
             </div>
           </div>
         </div>
@@ -434,7 +434,7 @@ export function AdUploadForm({
         <div className="text-sm">
           <div className="flex justify-between mb-1">
             <span className="text-gray-700">{packageName}</span>
-            <span className="font-semibold">N${packagePrice.toFixed(2)}</span>
+            <span className="font-semibold">BWP {packagePrice.toFixed(2)}</span>
           </div>
           <p className="text-xs text-gray-600">
             {billingCycle === 'MONTHLY' ? 'Per month' : 'Per year'}

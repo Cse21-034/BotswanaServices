@@ -19,8 +19,8 @@ const AdvertiseWithUsPage: FC = () => {
   const valueAddedPackages = [
     {
       name: "Advert 1",
-      price: "N$250",
-      yearPrice: "N$2400",
+      price: "BWP250",
+      yearPrice: "BWP2400",
       period: "p/m",
       yearPeriod: "/year",
       discount: "20% DISCOUNT",
@@ -35,8 +35,8 @@ const AdvertiseWithUsPage: FC = () => {
     },
     {
       name: "Advert 2",
-      price: "N$550",
-      yearPrice: "N$5280",
+      price: "BWP550",
+      yearPrice: "BWP5280",
       period: "p/m",
       yearPeriod: "/year",
       discount: "20% DISCOUNT",
@@ -51,8 +51,8 @@ const AdvertiseWithUsPage: FC = () => {
     },
     {
       name: "Advert 3",
-      price: "N$1000",
-      yearPrice: "N$9600",
+      price: "BWP1000",
+      yearPrice: "BWP9600",
       period: "p/m",
       yearPeriod: "/year",
       discount: "20% DISCOUNT",
@@ -67,8 +67,8 @@ const AdvertiseWithUsPage: FC = () => {
     },
     {
       name: "Advert 4",
-      price: "N$1500",
-      yearPrice: "N$14400",
+      price: "BWP1500",
+      yearPrice: "BWP14400",
       period: "p/m",
       yearPeriod: "/year",
       discount: "20% DISCOUNT",
@@ -84,8 +84,8 @@ const AdvertiseWithUsPage: FC = () => {
     },
     {
       name: "Advert 5",
-      price: "N$2000",
-      yearPrice: "N$19200",
+      price: "BWP2000",
+      yearPrice: "BWP19200",
       period: "p/m",
       yearPeriod: "/year",
       discount: "20% DISCOUNT",
@@ -100,8 +100,8 @@ const AdvertiseWithUsPage: FC = () => {
     },
     {
       name: "Promotions",
-      price: "N$2500",
-      yearPrice: "N$24000",
+      price: "BWP2500",
+      yearPrice: "BWP24000",
       period: "p/m",
       yearPeriod: "/year",
       discount: "20% DISCOUNT",
@@ -116,8 +116,8 @@ const AdvertiseWithUsPage: FC = () => {
     },
     {
       name: "Rotating Banner",
-      price: "N$800",
-      yearPrice: "N$7680",
+      price: "BWP800",
+      yearPrice: "BWP7680",
       period: "p/m",
       yearPeriod: "/year",
       discount: "20% DISCOUNT",
@@ -134,8 +134,8 @@ const AdvertiseWithUsPage: FC = () => {
     },
     {
       name: "Sticky Ad",
-      price: "N$600",
-      yearPrice: "N$5760",
+      price: "BWP600",
+      yearPrice: "BWP5760",
       period: "p/m",
       yearPeriod: "/year",
       discount: "20% DISCOUNT",
@@ -152,8 +152,8 @@ const AdvertiseWithUsPage: FC = () => {
     },
     {
       name: "Inline Ad",
-      price: "N$400",
-      yearPrice: "N$3840",
+      price: "BWP400",
+      yearPrice: "BWP3840",
       period: "p/m",
       yearPeriod: "/year",
       discount: "20% DISCOUNT",
@@ -169,8 +169,8 @@ const AdvertiseWithUsPage: FC = () => {
     },
     {
       name: "Listing Banner",
-      price: "N$700",
-      yearPrice: "N$6720",
+      price: "BWP700",
+      yearPrice: "BWP6720",
       period: "p/m",
       yearPeriod: "/year",
       discount: "20% DISCOUNT",
@@ -207,7 +207,7 @@ const AdvertiseWithUsPage: FC = () => {
     },
     {
       name: "DESERT ELEPHANTS",
-      price: "N$610.27",
+      price: "BWP 500",
       period: "/year",
       description: "Build visibility and engage more customers.",
       features: [
@@ -230,7 +230,7 @@ const AdvertiseWithUsPage: FC = () => {
     },
     {
       name: "DESERT LIONS",
-      price: "N$915.41",
+      price: "BWP 750",
       period: "/year",
       description: "Maximum exposure for established businesses.",
       features: [

@@ -1329,7 +1329,7 @@ const BusinessDashboardPage: FC<BusinessDashboardPageProps> = ({ }) => {
                         )}
                         {listing.pricePerNight !== undefined && (
                           <div className="flex items-center gap-1">
-                            <span className="font-medium">NAD {listing.pricePerNight}/night</span>
+                            <span className="font-medium">BWP {listing.pricePerNight}/night</span>
                           </div>
                         )}
                         {listing.city && (

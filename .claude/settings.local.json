@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(grep -E \"^-.*\\\\.\\(md|ts|js|json\\)$\")"
+      "Bash(grep -E \"^-.*\\\\.\\(md|ts|js|json\\)$\")",
+      "Bash(git commit -m ' *)"
     ]
   }
 }

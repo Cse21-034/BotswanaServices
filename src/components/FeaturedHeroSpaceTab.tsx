@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { FC, useState, useEffect } from "react";
 import { SparklesIcon, PhotoIcon, CalendarIcon, CurrencyDollarIcon, CheckCircleIcon, ClockIcon, CheckIcon } from "@heroicons/react/24/outline";
@@ -317,7 +317,7 @@ const FeaturedHeroSpaceTab: FC<FeaturedHeroSpaceTabProps> = ({ businessId }) => 
               <div>
                 <p className="text-xs font-medium text-neutral-600 dark:text-neutral-400">Billing Cycle</p>
                 <p className="text-sm font-bold text-neutral-900 dark:text-neutral-100">
-                  {featuredSpace.billingCycle === "MONTHLY" ? "Monthly (N$100)" : "Yearly (N$1,008)"}
+                  {featuredSpace.billingCycle === "MONTHLY" ? "Monthly (BWP 100)" : "Yearly (BWP 1,008)"}
                 </p>
               </div>
             </div>
@@ -450,7 +450,7 @@ const FeaturedHeroSpaceTab: FC<FeaturedHeroSpaceTabProps> = ({ businessId }) => 
 
                     <div className="mb-3">
                       <div className="flex items-baseline gap-1 mb-1">
-                        <span className="text-lg font-bold">N${pkg.monthlyPrice}</span>
+                        <span className="text-lg font-bold">BWP {pkg.monthlyPrice}</span>
                         <span 
                           className="text-xs"
                           style={pkg.popular ? { color: 'rgba(255, 255, 255, 0.8)' } : { color: '#6b7280' }}
@@ -459,7 +459,7 @@ const FeaturedHeroSpaceTab: FC<FeaturedHeroSpaceTabProps> = ({ businessId }) => 
                         </span>
                       </div>
                       <div className="text-xs font-semibold mb-1">
-                        <span>N${pkg.yearlyPrice}</span>
+                        <span>BWP {pkg.yearlyPrice}</span>
                         <span 
                           style={pkg.popular ? { color: 'rgba(255, 255, 255, 0.8)' } : { color: '#6b7280' }}
                         >
@@ -603,7 +603,7 @@ const FeaturedHeroSpaceTab: FC<FeaturedHeroSpaceTabProps> = ({ businessId }) => 
                   onClick={() => setShowAdPackageModal(false)}
                   className="text-neutral-500 hover:text-neutral-700 dark:hover:text-neutral-300"
                 >
-                  ✕
+                  âœ•
                 </button>
               </div>
 
@@ -650,7 +650,7 @@ const FeaturedHeroSpaceTab: FC<FeaturedHeroSpaceTabProps> = ({ businessId }) => 
                   }}
                   className="absolute top-2 right-2 p-2 bg-red-500 text-white rounded-full hover:bg-red-600"
                 >
-                  ✕
+                  âœ•
                 </button>
               </div>
             ) : (
@@ -717,11 +717,11 @@ const FeaturedHeroSpaceTab: FC<FeaturedHeroSpaceTabProps> = ({ businessId }) => 
                   {cycle === "MONTHLY" ? "Monthly" : "Yearly"}
                 </p>
                 <p className="text-2xl font-bold text-primary-600 dark:text-primary-400">
-                  N${PRICING[cycle as "MONTHLY" | "YEARLY"].price}
+                  BWP {PRICING[cycle as "MONTHLY" | "YEARLY"].price}
                 </p>
                 <p className="text-xs text-neutral-600 dark:text-neutral-400 mt-1">
                   {PRICING[cycle as "MONTHLY" | "YEARLY"].duration}
-                  {cycle === "YEARLY" && ` • Save N$${PRICING.YEARLY.savings}`}
+                  {cycle === "YEARLY" && ` â€¢ Save BWP ${PRICING.YEARLY.savings}`}
                 </p>
               </button>
             ))}
@@ -736,14 +736,14 @@ const FeaturedHeroSpaceTab: FC<FeaturedHeroSpaceTabProps> = ({ businessId }) => 
           </div>
           <div className="flex justify-between items-center pt-2 border-t border-neutral-200 dark:border-neutral-600">
             <span className="text-neutral-600 dark:text-neutral-400">Total Price:</span>
-            <span className="text-xl font-bold text-primary-600 dark:text-primary-400">N${PRICING[billingCycle].price}</span>
+            <span className="text-xl font-bold text-primary-600 dark:text-primary-400">BWP {PRICING[billingCycle].price}</span>
           </div>
         </div>
 
         {/* Buttons */}
         <div className="flex gap-4">
           <ButtonPrimary onClick={handlePurchase} loading={uploading} className="flex-1 justify-center">
-            {uploading ? "Processing..." : `Proceed to Payment (N$${PRICING[billingCycle].price})`}
+            {uploading ? "Processing..." : `Proceed to Payment (BWP ${PRICING[billingCycle].price})`}
           </ButtonPrimary>
           <ButtonSecondary onClick={() => setShowForm(false)} className="flex-1 justify-center">
             Cancel

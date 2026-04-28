@@ -1,4 +1,4 @@
-import * as React from 'react';
+﻿import * as React from 'react';
 import { Html, Head, Preview, Body, Container, Section, Text, Hr, Link } from '@react-email/components';
 
 interface PaymentSuccessEmailProps {
@@ -22,7 +22,7 @@ export const PaymentSuccessEmail = ({
 }: PaymentSuccessEmailProps) => (
   <Html>
     <Head />
-    <Preview>Payment confirmed — {planName} plan is now active</Preview>
+    <Preview>Payment confirmed â€” {planName} plan is now active</Preview>
     <Body style={{ backgroundColor: '#f9fafb', fontFamily: 'Arial, sans-serif', color: '#374151' }}>
       <Container style={{ maxWidth: 600, margin: '0 auto', background: '#fff', padding: 32, borderRadius: 12, border: '1px solid #e5e7eb' }}>
         <Section style={{ textAlign: 'center', marginBottom: 24 }}>
@@ -33,7 +33,7 @@ export const PaymentSuccessEmail = ({
 
         <Section style={{ background: '#d1fae5', padding: 16, borderRadius: 8, marginBottom: 24, textAlign: 'center' }}>
           <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#065f46', margin: 0 }}>
-            ✅ Payment Successful!
+            âœ… Payment Successful!
           </Text>
         </Section>
 
@@ -49,7 +49,7 @@ export const PaymentSuccessEmail = ({
             Payment Details
           </Text>
           <Text style={{ fontSize: 14, margin: '4px 0' }}><strong>Plan:</strong> {planName}</Text>
-          <Text style={{ fontSize: 14, margin: '4px 0' }}><strong>Amount:</strong> N${amount}</Text>
+          <Text style={{ fontSize: 14, margin: '4px 0' }}><strong>Amount:</strong> BWP {amount}</Text>
           <Text style={{ fontSize: 14, margin: '4px 0' }}><strong>Billing:</strong> {billingCycle === 'YEARLY' ? 'Yearly' : 'Monthly'}</Text>
           {renewalDate && <Text style={{ fontSize: 14, margin: '4px 0' }}><strong>Next renewal:</strong> {renewalDate}</Text>}
           <Text style={{ fontSize: 14, margin: '4px 0', color: '#6b7280' }}><strong>Reference:</strong> {transactionRef}</Text>
@@ -70,7 +70,7 @@ export const PaymentSuccessEmail = ({
 
         <Hr style={{ borderColor: '#e5e7eb', margin: '24px 0' }} />
         <Text style={{ fontSize: 12, color: '#9ca3af', textAlign: 'center' as const }}>
-          © 2025 Botswana Services. All rights reserved.
+          Â© 2025 Botswana Services. All rights reserved.
         </Text>
       </Container>
     </Body>
