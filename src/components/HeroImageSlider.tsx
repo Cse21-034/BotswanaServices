@@ -10,7 +10,7 @@ interface HeroAd {
   destinationUrl?: string;
 }
 
-const FALLBACK_IMAGE = "/images/hero/1.png";
+const FALLBACK_IMAGE = "/images/ads/placeholder-300x400.svg";
 
 function trackEvent(adId: string, eventType: "impression" | "click") {
   fetch("/api/advertising/track", {
