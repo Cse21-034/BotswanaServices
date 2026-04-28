@@ -290,7 +290,6 @@ export const botswanaDirectory: DirectoryEntry[] = [
     fax: "+267 395 1279",
     email: "info@bbs.bw",
     website: "www.bbs.bw",
-    image: "/images/parastatalslogos/bbs logo.png",
     type: "parastatal"
   },
   {
@@ -303,7 +302,6 @@ export const botswanaDirectory: DirectoryEntry[] = [
     fax: "+267 317 0452",
     email: "enquiries@bitc.co.bw",
     website: "www.bitc.co.bw",
-    image: "/images/parastatalslogos/bitc logo.png",
     type: "parastatal"
   },
   {
@@ -316,7 +314,6 @@ export const botswanaDirectory: DirectoryEntry[] = [
     fax: "+267 390 5914",
     email: "bhc@bhc.bw",
     website: "www.bhc.bw",
-    image: "/images/parastatalslogos/bhc logo.jpg",
     type: "parastatal"
   },
   {
@@ -421,7 +418,6 @@ export const botswanaDirectory: DirectoryEntry[] = [
     fax: "+267 395 4423",
     email: "info@botswanapost.bw",
     website: "www.botswanapost.bw",
-    image: "/images/parastatalslogos/botswana post logo.png",
     type: "parastatal"
   },
   {
@@ -435,7 +431,6 @@ export const botswanaDirectory: DirectoryEntry[] = [
     tollfree: "0800 600 666",
     email: "info@bpc.bw",
     website: "www.bpc.bw",
-    image: "/images/parastatalslogos/bpc logo.png",
     type: "utility"
   },
   {
@@ -518,6 +513,7 @@ export const botswanaDirectory: DirectoryEntry[] = [
     fax: "+267 363 9999/395 3101",
     email: "comms@burs.org.bw",
     website: "www.burs.org.bw",
+    image: "/images/parastatalslogos/burs logo.png",
     type: "parastatal"
   },
   {
@@ -623,6 +619,7 @@ export const botswanaDirectory: DirectoryEntry[] = [
     phone: "+267 310 2595/368 6100",
     fax: "+267 310 2376/2353",
     website: "www.nbfira.org.bw",
+    image: "/images/parastatalslogos/nbfira logo.png",
     type: "parastatal"
   },
   {
@@ -895,7 +892,6 @@ export const botswanaDirectory: DirectoryEntry[] = [
     fax: "+267 397 4802",
     email: "sales@airbotswana.co.bw",
     website: "www.airbotswana.co.bw",
-    image: "/images/parastatalslogos/air botswana logo.png",
     type: "parastatal"
   },
   {
@@ -909,7 +905,6 @@ export const botswanaDirectory: DirectoryEntry[] = [
     tollfree: "0800 600 500",
     email: "wuc@wuc.bw",
     website: "www.wuc.bw",
-    image: "/images/parastatalslogos/wuc logo.png",
     type: "utility"
   }
 ];
