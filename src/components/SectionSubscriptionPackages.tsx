@@ -149,14 +149,14 @@ const SectionSubscriptionPackages: React.FC<SectionSubscriptionPackagesProps> = 
 
             // CRITICAL: Check for success and valid payRequestId before proceeding
             if (!initiateData.success || !initiateData.payRequestId) {
-              console.error('[Subscription] âŒ Initiate failed or no payRequestId returned');
+              console.error('[Subscription] ❌ Initiate failed or no payRequestId returned');
               console.error('[Subscription] Response:', initiateData);
               alert(`Payment processing error: ${initiateData.message || 'Failed to initialize payment request'}\n\nPlease try again or contact support.`);
               return;
             }
 
             const payRequestId = initiateData.payRequestId;
-            console.log('[Subscription] âœ… Step 2: Received verified PAY_REQUEST_ID:', payRequestId);
+            console.log('[Subscription] ✅ Step 2: Received verified PAY_REQUEST_ID:', payRequestId);
 
             // Step 2: Call our backend to calculate process.trans checksum
             console.log('[Subscription] Step 3: Getting process parameters');
@@ -254,14 +254,14 @@ const SectionSubscriptionPackages: React.FC<SectionSubscriptionPackagesProps> = 
 
               // CRITICAL: Check for success and valid payRequestId before proceeding
               if (!initiateData.success || !initiateData.payRequestId) {
-                console.error('[Subscription] âŒ Initiate failed or no payRequestId returned');
+                console.error('[Subscription] ❌ Initiate failed or no payRequestId returned');
                 console.error('[Subscription] Response:', initiateData);
                 alert(`Payment processing error: ${initiateData.message || 'Failed to initialize payment request'}\n\nPlease try again or contact support.`);
                 return;
               }
 
               const payRequestId = initiateData.payRequestId;
-              console.log('[Subscription] âœ… Step 2: Received verified PAY_REQUEST_ID:', payRequestId);
+              console.log('[Subscription] ✅ Step 2: Received verified PAY_REQUEST_ID:', payRequestId);
 
               // Step 2: Call our backend to calculate process.trans checksum
               console.log('[Subscription] Step 3: Getting process parameters');
@@ -336,7 +336,7 @@ const SectionSubscriptionPackages: React.FC<SectionSubscriptionPackagesProps> = 
     { label: 'Location map (public profile)', WILD_HORSES: false, DESERT_ELEPHANTS: true, DESERT_LIONS: true },
     { label: 'Services offered (public profile)', WILD_HORSES: false, DESERT_ELEPHANTS: true, DESERT_LIONS: true },
     { label: 'Memberships & Associations', WILD_HORSES: false, DESERT_ELEPHANTS: true, DESERT_LIONS: true },
-    { label: `Product/service listings (${SUBSCRIPTION_TIERS.WILD_HORSES.limits.listings} / ${SUBSCRIPTION_TIERS.DESERT_ELEPHANTS.limits.listings} / âˆž)`, WILD_HORSES: true, DESERT_ELEPHANTS: true, DESERT_LIONS: true },
+    { label: `Product/service listings (${SUBSCRIPTION_TIERS.WILD_HORSES.limits.listings} / ${SUBSCRIPTION_TIERS.DESERT_ELEPHANTS.limits.listings} / ∞)`, WILD_HORSES: true, DESERT_ELEPHANTS: true, DESERT_LIONS: true },
     { label: `Promotions/month (0 / ${SUBSCRIPTION_TIERS.DESERT_ELEPHANTS.limits.promotions} / ${SUBSCRIPTION_TIERS.DESERT_LIONS.limits.promotions})`, WILD_HORSES: false, DESERT_ELEPHANTS: true, DESERT_LIONS: true },
     { label: `Branch locations (0 / ${SUBSCRIPTION_TIERS.DESERT_ELEPHANTS.limits.branches} / ${SUBSCRIPTION_TIERS.DESERT_LIONS.limits.branches})`, WILD_HORSES: false, DESERT_ELEPHANTS: true, DESERT_LIONS: true },
     { label: 'Property listings', WILD_HORSES: false, DESERT_ELEPHANTS: true, DESERT_LIONS: true },
@@ -369,11 +369,11 @@ const SectionSubscriptionPackages: React.FC<SectionSubscriptionPackagesProps> = 
     return (
       <div className="relative pt-4">
         <Heading isCenter desc="You're on Desert Elephants. Unlock the full power of Botswana Services.">
-          Ready to go further? ðŸ¦
+          Ready to go further? 🦁
         </Heading>
         <div className="mt-10 max-w-2xl mx-auto bg-gradient-to-br from-orange-500 to-red-600 rounded-3xl p-8 text-white shadow-2xl">
           <div className="flex items-center gap-3 mb-4">
-            <span className="text-4xl">ðŸ¦</span>
+            <span className="text-4xl">🦁</span>
             <div>
               <h3 className="text-2xl font-bold">Upgrade to Desert Lions</h3>
               <p className="text-orange-100 text-sm">Unlock all premium features</p>
@@ -386,7 +386,7 @@ const SectionSubscriptionPackages: React.FC<SectionSubscriptionPackagesProps> = 
           <div className="mb-6 grid grid-cols-1 sm:grid-cols-2 gap-2">
             {lionsExclusiveFeatures.map((f) => (
               <div key={f} className="flex items-center gap-2 text-sm text-orange-50">
-                <span className="text-yellow-300">âœ“</span> {f}
+                <span className="text-yellow-300">✓</span> {f}
               </div>
             ))}
           </div>
@@ -395,7 +395,7 @@ const SectionSubscriptionPackages: React.FC<SectionSubscriptionPackagesProps> = 
             disabled={processingTier === 'DESERT_LIONS'}
             className="w-full py-3 rounded-xl bg-white text-orange-600 font-bold text-lg hover:bg-orange-50 transition-colors disabled:opacity-60"
           >
-            {processingTier === 'DESERT_LIONS' ? 'Processing...' : 'Upgrade to Desert Lions â†’'}
+            {processingTier === 'DESERT_LIONS' ? 'Processing...' : 'Upgrade to Desert Lions →'}
           </button>
         </div>
         <SelectBusinessModal
@@ -421,7 +421,7 @@ const SectionSubscriptionPackages: React.FC<SectionSubscriptionPackagesProps> = 
       {/* Annual billing notice */}
       <div className="mt-10 flex justify-center">
         <span className="inline-block bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-100 text-sm font-semibold px-4 py-2 rounded-full">
-          Annual billing â€” pay once, covered for the whole year
+          Annual billing — pay once, covered for the whole year
         </span>
       </div>
 
@@ -446,23 +446,23 @@ const SectionSubscriptionPackages: React.FC<SectionSubscriptionPackagesProps> = 
               {/* Best Value Badge */}
               {isPremium && (
                 <div className="absolute top-0 right-0 bg-gradient-to-r from-yellow-300 to-yellow-400 text-orange-900 px-4 py-2 rounded-bl-lg font-semibold text-xs uppercase tracking-wider">
-                  ðŸ† Best Value
+                  🏆 Best Value
                 </div>
               )}
 
               {/* Current Plan Badge */}
               {currentTier === tier.tier && (
                 <div className="absolute top-0 left-0 bg-burgundy-600 text-white px-4 py-2 rounded-br-lg font-semibold text-xs uppercase">
-                  âœ“ Active Plan
+                  ✓ Active Plan
                 </div>
               )}
 
               <div className="p-6 sm:p-8 flex flex-col flex-grow">
                 {/* Icon/Emoji */}
                 <div className="mb-4 text-4xl">
-                  {tier.tier === 'WILD_HORSES' && 'ðŸ´'}
-                  {tier.tier === 'DESERT_ELEPHANTS' && 'ðŸ˜'}
-                  {tier.tier === 'DESERT_LIONS' && 'ðŸ¦'}
+                  {tier.tier === 'WILD_HORSES' && '🐴'}
+                  {tier.tier === 'DESERT_ELEPHANTS' && '🐘'}
+                  {tier.tier === 'DESERT_LIONS' && '🦁'}
                 </div>
 
                 {/* Tier Name */}
@@ -514,7 +514,7 @@ const SectionSubscriptionPackages: React.FC<SectionSubscriptionPackagesProps> = 
                           : 'bg-gray-200 text-gray-600 dark:bg-gray-700 dark:text-gray-400 cursor-default'
                       }`}
                     >
-                      âœ“ Your Current Plan
+                      ✓ Your Current Plan
                     </button>
                   ) : (
                     <button
@@ -550,7 +550,7 @@ const SectionSubscriptionPackages: React.FC<SectionSubscriptionPackagesProps> = 
                           Processing...
                         </span>
                       ) : (
-                        `${tier.yearlyPrice === 0 ? 'Get Started' : 'Subscribe Now'} â†’`
+                        `${tier.yearlyPrice === 0 ? 'Get Started' : 'Subscribe Now'} →`
                       )}
                     </button>
                   )}
@@ -596,7 +596,7 @@ const SectionSubscriptionPackages: React.FC<SectionSubscriptionPackagesProps> = 
       {/* CTA Section */}
       <div className="mt-16 text-center">
         <p className="text-gray-600 dark:text-gray-400 mb-6">
-          ðŸš€ All plans include free business listing. Upgrade anytime to unlock premium features.
+          🚀 All plans include free business listing. Upgrade anytime to unlock premium features.
         </p>
       </div>
 
