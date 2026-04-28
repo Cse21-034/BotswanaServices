@@ -92,8 +92,7 @@ const PromotionsPage = () => {
           aspectRatio="wide"
           className="h-[350px] lg:h-[450px]"
           fallbackImages={[
-            { src: "/images/promotionhero/fnb.webp", alt: "Exclusive Promotions" },
-            { src: "/images/promotionhero/great-burgers.webp", alt: "Featured Deals" },
+            { src: "/images/ads/placeholder-900x300.svg", alt: "Advertise here" },
           ]}
         />
       </div>

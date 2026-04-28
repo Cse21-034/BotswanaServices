@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/prisma";
+﻿import { prisma } from "@/lib/prisma";
 import Link from "next/link";
 import ListingCard from "@/components/Listingcard";
 import VerticalFeatureBanners from "@/components/VerticalFeatureBanners";
@@ -34,7 +34,7 @@ const ListingsPage = async () => {
           packageId="advert4"
           intervalMs={10000}
           aspectRatio="landscape"
-          fallbackImages={[{ src: "/images/hero/1.png", alt: "Advertisement" }]}
+          fallbackImages={[{ src: "/images/ads/placeholder-970x303.svg", alt: "Advertise here" }]}
         />
       </div>
 
@@ -109,7 +109,7 @@ const ListingsPage = async () => {
                 packageId="advert3"
                 intervalMs={7000}
                 aspectRatio="landscape"
-                fallbackImages={[{ src: "/images/hero/2.png", alt: "Advertisement" }]}
+                fallbackImages={[{ src: "/images/ads/placeholder-970x303.svg", alt: "Advertise here" }]}
               />
             </div>
 
@@ -143,7 +143,7 @@ const ListingsPage = async () => {
                 packageId="advert3"
                 intervalMs={7000}
                 aspectRatio="landscape"
-                fallbackImages={[{ src: "/images/hero/2.png", alt: "Advertisement" }]}
+                fallbackImages={[{ src: "/images/ads/placeholder-970x303.svg", alt: "Advertise here" }]}
               />
             </div>
           </div>

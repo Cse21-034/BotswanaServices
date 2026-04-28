@@ -3,7 +3,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
-import { getAdsByType } from "@/data/ads";
 
 interface NormalizedAd {
   id: string;
@@ -83,19 +82,16 @@ const RotatingBannerAd: React.FC<RotatingBannerAdProps> = ({
         }
       } catch {}
 
-      // 3. Fall back to static ads.ts if nothing from DB
+      // 3. Fall back to placeholder when no paid ads exist
       if (combined.length === 0) {
-        const staticAds = getAdsByType("banner");
-        combined.push(
-          ...staticAds.map((ad) => ({
-            id: `static-${ad.id}`,
-            image: ad.image,
-            title: ad.title,
-            alt: ad.alt,
-            link: ad.link,
-            isFallback: true,
-          }))
-        );
+        combined.push({
+          id: "placeholder-hero",
+          image: "/images/ads/placeholder-970x194.svg",
+          title: "Advertise Here",
+          alt: "Advertise your business here",
+          link: "/advertise",
+          isFallback: true,
+        });
       }
 
       setAds(combined);

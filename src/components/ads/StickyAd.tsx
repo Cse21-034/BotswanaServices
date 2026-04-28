@@ -3,7 +3,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { XMarkIcon, ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
-import { getAdsByType } from "@/data/ads";
 
 interface Ad {
   id: string;
@@ -60,18 +59,15 @@ const StickyAd: React.FC<StickyAdProps> = ({ position = "bottom-right", classNam
         }
       } catch {}
 
-      // Fallback to static ads.ts
-      const staticAds = getAdsByType("banner");
-      setAds(
-        staticAds.map((ad) => ({
-          id: `static-${ad.id}`,
-          image: ad.image,
-          title: ad.title,
-          alt: ad.alt,
-          link: ad.link,
-          isFallback: true,
-        }))
-      );
+      // Fallback to placeholder
+      setAds([{
+        id: "placeholder-sticky",
+        image: "/images/ads/placeholder-300x300.svg",
+        title: "Advertise Here",
+        alt: "Advertise your business here",
+        link: "/advertise",
+        isFallback: true,
+      }]);
       setIsLoading(false);
     };
     load();

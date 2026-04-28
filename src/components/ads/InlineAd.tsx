@@ -3,7 +3,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import { getAdsByType } from "@/data/ads";
 
 interface Ad {
   id: string;
@@ -60,19 +59,15 @@ const InlineAd: React.FC<InlineAdProps> = ({ className = "", style = "default" }
         }
       } catch {}
 
-      // Fallback to static ads.ts
-      const staticAds = getAdsByType("inline");
-      if (staticAds.length > 0) {
-        const picked = staticAds[Math.floor(Math.random() * staticAds.length)];
-        setAd({
-          id: `static-${picked.id}`,
-          image: picked.image,
-          title: picked.title,
-          alt: picked.alt,
-          link: picked.link,
-          isFallback: true,
-        });
-      }
+      // Fallback to placeholder
+      setAd({
+        id: "placeholder-inline",
+        image: "/images/ads/placeholder-800x450.svg",
+        title: "Advertise Here",
+        alt: "Advertise your business here",
+        link: "/advertise",
+        isFallback: true,
+      });
       setIsLoading(false);
     };
     load();

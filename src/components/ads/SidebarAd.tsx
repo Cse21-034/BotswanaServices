@@ -2,31 +2,78 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { AdConfig, getAdsByType } from "@/data/ads";
+
+interface Ad {
+  id: string;
+  image: string;
+  title: string;
+  alt: string;
+  link: string;
+  isFallback?: boolean;
+}
 
 interface SidebarAdProps {
   className?: string;
 }
 
+function trackEvent(adId: string, eventType: "impression" | "click") {
+  fetch("/api/advertising/track", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      adSubscriptionId: adId,
+      eventType,
+      referrer: typeof window !== "undefined" ? window.location.href : undefined,
+      userAgent: typeof navigator !== "undefined" ? navigator.userAgent : undefined,
+    }),
+  }).catch(() => {});
+}
+
 const SidebarAd: React.FC<SidebarAdProps> = ({ className = "" }) => {
-  const [ads, setAds] = useState<AdConfig[]>([]);
+  const [ads, setAds] = useState<Ad[]>([]);
   const [currentAdIndex, setCurrentAdIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate async ad loading
-    const sidebarAds = getAdsByType('sidebar');
-    setAds(sidebarAds);
-    setIsLoading(false);
+    const load = async () => {
+      try {
+        const res = await fetch("/api/advertising/hero-images?packageId=sidebar");
+        if (res.ok) {
+          const data = await res.json();
+          const dbAds: Ad[] = (data.data || []).map((ad: any) => ({
+            id: ad.id,
+            image: ad.adImageUrl,
+            title: ad.adTitle,
+            alt: ad.adTitle,
+            link: ad.destinationUrl || "#",
+          }));
+          if (dbAds.length > 0) {
+            setAds(dbAds);
+            setIsLoading(false);
+            return;
+          }
+        }
+      } catch {}
+
+      // Fallback to placeholder
+      setAds([{
+        id: "placeholder-sidebar",
+        image: "/images/ads/placeholder-300x400.svg",
+        title: "Advertise Here",
+        alt: "Advertise your business here",
+        link: "/advertise",
+        isFallback: true,
+      }]);
+      setIsLoading(false);
+    };
+    load();
   }, []);
 
   useEffect(() => {
-    if (ads.length === 0) return;
-
+    if (ads.length <= 1) return;
     const interval = setInterval(() => {
       setCurrentAdIndex((prev) => (prev + 1) % ads.length);
-    }, 8000); // Change ad every 8 seconds
-
+    }, 8000);
     return () => clearInterval(interval);
   }, [ads.length]);
 
@@ -34,9 +81,11 @@ const SidebarAd: React.FC<SidebarAdProps> = ({ className = "" }) => {
 
   const currentAd = ads[currentAdIndex];
 
-  const handleClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    window.open(currentAd.link, '_blank', 'noopener,noreferrer');
+  const handleClick = () => {
+    if (!currentAd.isFallback) trackEvent(currentAd.id, "click");
+    if (currentAd.link && currentAd.link !== "#") {
+      window.open(currentAd.link, "_blank", "noopener,noreferrer");
+    }
   };
 
   return (
@@ -48,7 +97,7 @@ const SidebarAd: React.FC<SidebarAdProps> = ({ className = "" }) => {
         </div>
 
         {/* Ad Image */}
-        <div 
+        <div
           className="relative w-full aspect-[3/4] cursor-pointer overflow-hidden bg-neutral-100 dark:bg-neutral-700 group"
           onClick={handleClick}
         >
@@ -68,32 +117,31 @@ const SidebarAd: React.FC<SidebarAdProps> = ({ className = "" }) => {
             {currentAd.title}
           </h3>
 
-          {/* Indicators */}
-          <div className="flex justify-center gap-1.5">
-            {ads.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentAdIndex(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === currentAdIndex
-                    ? 'bg-burgundy-600 w-6'
-                    : 'bg-neutral-300 dark:bg-neutral-600 hover:bg-neutral-400'
-                }`}
-                aria-label={`Go to ad ${index + 1}`}
-              />
-            ))}
-          </div>
+          {ads.length > 1 && (
+            <div className="flex justify-center gap-1.5">
+              {ads.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentAdIndex(index)}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    index === currentAdIndex
+                      ? "bg-burgundy-600 w-6"
+                      : "bg-neutral-300 dark:bg-neutral-600 hover:bg-neutral-400"
+                  }`}
+                  aria-label={`Go to ad ${index + 1}`}
+                />
+              ))}
+            </div>
+          )}
 
-          {/* CTA Button */}
           <button
             onClick={handleClick}
             className="w-full py-2.5 bg-gradient-to-r from-burgundy-500 to-burgundy-600 text-white rounded-lg font-semibold text-sm hover:from-burgundy-600 hover:to-burgundy-700 transition-all duration-300 shadow-md hover:shadow-lg"
           >
-            Learn More
+            {currentAd.isFallback ? "Advertise Here" : "Learn More"}
           </button>
         </div>
 
-        {/* Ad Label */}
         <div className="px-4 py-2 border-t border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900">
           <p className="text-xs text-neutral-500 dark:text-neutral-400 text-center">Advertisement</p>
         </div>

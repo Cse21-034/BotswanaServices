@@ -86,9 +86,7 @@ const DetailtLayout = ({ children }: { children: ReactNode }) => {
             intervalMs={5000}
             aspectRatio="landscape"
             fallbackImages={[
-              { src: "/images/ad.png", alt: "Advertisement" },
-              { src: "/images/ads2.png", alt: "Advertisement" },
-              { src: "/images/ads3.jpg", alt: "Advertisement" },
+              { src: "/images/ads/placeholder-970x303.svg", alt: "Advertise here" },
             ]}
           />
         </div>

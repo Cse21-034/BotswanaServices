@@ -119,7 +119,7 @@ async function PageHome() {
             intervalMs={15000}
             aspectRatio="big"
             fallbackImages={[
-              { src: "/images/hero/1.png", alt: "Advertisement" },
+              { src: "/images/ads/placeholder-970x364.svg", alt: "Advertise here" },
             ]}
           />
         </div>
