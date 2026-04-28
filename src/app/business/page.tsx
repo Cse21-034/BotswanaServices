@@ -67,55 +67,49 @@ interface Option {
 }
 
 const NAMIBIA_LOCATIONS = [
-  { value: "Windhoek", label: "Windhoek" },
-  { value: "Walvis Bay", label: "Walvis Bay" },
-  { value: "Swakopmund", label: "Swakopmund" },
-  { value: "Oshakati", label: "Oshakati" },
-  { value: "Rundu", label: "Rundu" },
-  { value: "Katima Mulilo", label: "Katima Mulilo" },
-  { value: "Otjiwarongo", label: "Otjiwarongo" },
-  { value: "Keetmanshoop", label: "Keetmanshoop" },
-  { value: "Rehoboth", label: "Rehoboth" },
-  { value: "Gobabis", label: "Gobabis" },
-  { value: "Mariental", label: "Mariental" },
-  { value: "Tsumeb", label: "Tsumeb" },
-  { value: "Ondangwa", label: "Ondangwa" },
-  { value: "Ongwediva", label: "Ongwediva" },
-  { value: "Eenhana", label: "Eenhana" },
-  { value: "Okahandja", label: "Okahandja" },
-  { value: "Omaruru", label: "Omaruru" },
-  { value: "Usakos", label: "Usakos" },
-  { value: "Karibib", label: "Karibib" },
-  { value: "Outjo", label: "Outjo" },
-  { value: "Otavi", label: "Otavi" },
-  { value: "Okakarara", label: "Okakarara" },
-  { value: "Lüderitz", label: "Lüderitz" },
-  { value: "Bethanie", label: "Bethanie" },
-  { value: "Aus", label: "Aus" },
-  { value: "Oranjemund", label: "Oranjemund" },
-  { value: "Aranos", label: "Aranos" },
-  { value: "Gibeon", label: "Gibeon" },
-  { value: "Kalkrand", label: "Kalkrand" },
-  { value: "Stampriet", label: "Stampriet" },
-  { value: "Aroab", label: "Aroab" },
-  { value: "Koës", label: "Koës" },
-  { value: "Khorixas", label: "Khorixas" },
-  { value: "Opuwo", label: "Opuwo" },
-  { value: "Ruacana", label: "Ruacana" },
-  { value: "Erongo", label: "Erongo" },
-  { value: "Hardap", label: "Hardap" },
-  { value: "Karas", label: "Karas" },
-  { value: "Kavango East", label: "Kavango East" },
-  { value: "Kavango West", label: "Kavango West" },
-  { value: "Khomas", label: "Khomas" },
-  { value: "Kunene", label: "Kunene" },
-  { value: "Ohangwena", label: "Ohangwena" },
-  { value: "Omaheke", label: "Omaheke" },
-  { value: "Omusati", label: "Omusati" },
-  { value: "Oshana", label: "Oshana" },
-  { value: "Oshikoto", label: "Oshikoto" },
-  { value: "Otjozondjupa", label: "Otjozondjupa" },
-  { value: "Zambezi", label: "Zambezi" },
+  { value: "Gaborone", label: "Gaborone" },
+  { value: "Francistown", label: "Francistown" },
+  { value: "Molepolole", label: "Molepolole" },
+  { value: "Selebi-Phikwe", label: "Selebi-Phikwe" },
+  { value: "Maun", label: "Maun" },
+  { value: "Serowe", label: "Serowe" },
+  { value: "Kanye", label: "Kanye" },
+  { value: "Mahalapye", label: "Mahalapye" },
+  { value: "Lobatse", label: "Lobatse" },
+  { value: "Palapye", label: "Palapye" },
+  { value: "Ramotswa", label: "Ramotswa" },
+  { value: "Kasane", label: "Kasane" },
+  { value: "Jwaneng", label: "Jwaneng" },
+  { value: "Orapa", label: "Orapa" },
+  { value: "Letlhakane", label: "Letlhakane" },
+  { value: "Tlokweng", label: "Tlokweng" },
+  { value: "Mogoditshane", label: "Mogoditshane" },
+  { value: "Thamaga", label: "Thamaga" },
+  { value: "Mochudi", label: "Mochudi" },
+  { value: "Tutume", label: "Tutume" },
+  { value: "Shakawe", label: "Shakawe" },
+  { value: "Gumare", label: "Gumare" },
+  { value: "Masunga", label: "Masunga" },
+  { value: "Tonota", label: "Tonota" },
+  { value: "Bobonong", label: "Bobonong" },
+  { value: "Sowa Town", label: "Sowa Town" },
+  { value: "Nata", label: "Nata" },
+  { value: "Gweta", label: "Gweta" },
+  { value: "Ghanzi", label: "Ghanzi" },
+  { value: "Tsabong", label: "Tsabong" },
+  { value: "Hukuntsi", label: "Hukuntsi" },
+  { value: "Phakalane", label: "Phakalane" },
+  { value: "Gabane", label: "Gabane" },
+  { value: "Central District", label: "Central District" },
+  { value: "Chobe District", label: "Chobe District" },
+  { value: "Ghanzi District", label: "Ghanzi District" },
+  { value: "Kgalagadi District", label: "Kgalagadi District" },
+  { value: "Kgatleng District", label: "Kgatleng District" },
+  { value: "Kweneng District", label: "Kweneng District" },
+  { value: "North East District", label: "North East District" },
+  { value: "North West District", label: "North West District" },
+  { value: "South East District", label: "South East District" },
+  { value: "Southern District", label: "Southern District" },
 ];
 
 interface BusinessData {
@@ -281,7 +275,7 @@ const BusinessDashboardPage: FC<BusinessDashboardPageProps> = ({ }) => {
         });
 
         // Parse address and separate fields
-        setCountry(data.country || "Namibia");
+        setCountry(data.country || "Botswana");
         setCity(data.city ? { value: data.city, label: data.city } : null);
         setStreetName(data.streetName || "");
         setPlotNumber(data.plotNumber || "");
@@ -305,7 +299,7 @@ const BusinessDashboardPage: FC<BusinessDashboardPageProps> = ({ }) => {
             createdAt: new Date(photo.createdAt)
           })),
           establishedYear: data.establishedYear ? data.establishedYear.toString() : "",
-          country: data.country || "Namibia",
+          country: data.country || "Botswana",
           city: data.city || "",
           streetName: data.streetName || "",
           plotNumber: data.plotNumber || "",
@@ -425,7 +419,7 @@ const BusinessDashboardPage: FC<BusinessDashboardPageProps> = ({ }) => {
 
       // Construct the full address from separate fields
       const cityStr = city?.value || '';
-      const countryStr = country || 'Namibia';
+      const countryStr = country || 'Botswana';
       
       // Build address: Unit/Shop, Plot Number, Street Name, City, Country
       const addressParts = [];
@@ -973,7 +967,7 @@ const BusinessDashboardPage: FC<BusinessDashboardPageProps> = ({ }) => {
                   className="w-full"
                   disabled
                 >
-                  <option value="Namibia">Namibia</option>
+                  <option value="Botswana">Botswana</option>
                 </Select>
               </div>
 
@@ -1041,7 +1035,7 @@ const BusinessDashboardPage: FC<BusinessDashboardPageProps> = ({ }) => {
                   latitude={latitude}
                   longitude={longitude}
                   address={[plotNumber, streetName].filter(Boolean).join(", ")}
-                  city={city?.value || "Windhoek"}
+                  city={city?.value || "Gaborone"}
                   onCoordinatesChange={(lat, lng) => {
                     setLatitude(lat);
                     setLongitude(lng);

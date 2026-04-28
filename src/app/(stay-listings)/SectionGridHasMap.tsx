@@ -8,7 +8,7 @@ import ButtonClose from "@/shared/ButtonClose";
 import Checkbox from "@/shared/Checkbox";
 import Pagination from "@/shared/Pagination";
 import TabFilters from "./TabFilters";
-const logoMobile = "/images/namibia-logo/squarelogo.PNG";
+const logoMobile = "/images/botswana-logo/squarelogo.PNG";
 import Heading2 from "@/shared/Heading2";
 import StayCard2 from "@/components/StayCard2";
 import { useSearchParams, useRouter } from "next/navigation";
@@ -342,7 +342,7 @@ const SectionGridHasMap: FC<SectionGridHasMapProps> = () => {
       const totalLng = validBusinesses.reduce((sum, b) => sum + b.longitude!, 0);
       return [totalLat / validBusinesses.length, totalLng / validBusinesses.length];
     }
-    return [-22.5597, 17.0832]; // Default to Windhoek if no valid business coordinates
+    return [-24.6282, 25.9231]; // Default to Gaborone if no valid business coordinates
   };
 
   // Get display count for current category

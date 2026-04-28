@@ -71,8 +71,8 @@ const LocationSearchInput: FC<LocationSearchInputProps> = ({
         },
         (error) => {
           console.error("Error getting location:", error);
-          // Fallback to Windhoek if location access is denied
-          const fallbackCity = "Windhoek";
+          // Fallback to Gaborone if location access is denied
+          const fallbackCity = "Gaborone";
           setInternalLocation(fallbackCity);
           setSearchQuery(fallbackCity);
           onLocationChange(fallbackCity);
@@ -168,7 +168,7 @@ const LocationSearchInput: FC<LocationSearchInputProps> = ({
                     Popular Cities
                   </h3>
                   <div className="grid grid-cols-2 gap-2">
-                    {["Windhoek", "Walvis Bay", "Swakopmund", "Oshakati"].map((city) => (
+                    {["Gaborone", "Francistown", "Maun", "Kasane"].map((city) => (
                       <button
                         key={city}
                         onClick={() => {

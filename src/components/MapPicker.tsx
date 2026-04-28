@@ -42,14 +42,14 @@ const MapPicker: React.FC<MapPickerProps> = ({
   onCoordinatesChange,
 }) => {
   const [position, setPosition] = useState<[number, number]>([
-    latitude || -22.5597,
-    longitude || 17.0832,
+    latitude || -24.6282,
+    longitude || 25.9231,
   ]);
   const [inputLat, setInputLat] = useState<string>(
-    latitude?.toString() || "-22.5597"
+    latitude?.toString() || "-24.6282"
   );
   const [inputLng, setInputLng] = useState<string>(
-    longitude?.toString() || "17.0832"
+    longitude?.toString() || "25.9231"
   );
 
   // Update position when props change
@@ -148,7 +148,7 @@ const MapPicker: React.FC<MapPickerProps> = ({
           <Input
             type="number"
             step="0.0001"
-            placeholder="e.g., -22.5597"
+            placeholder="e.g., -24.6282"
             value={inputLat}
             onChange={handleLatChange}
           />
@@ -161,7 +161,7 @@ const MapPicker: React.FC<MapPickerProps> = ({
           <Input
             type="number"
             step="0.0001"
-            placeholder="e.g., 17.0832"
+            placeholder="e.g., 25.9231"
             value={inputLng}
             onChange={handleLngChange}
           />

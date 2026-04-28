@@ -38,22 +38,22 @@ const LocationInput: FC<LocationInputProps> = ({
   // Botswana location suggestions
   const popularLocations = [
     "Gaborone",
-    "Cape Town",
-    "Durban",
-    "Pretoria",
-    "Bloemfontein",
-    "Gqeberha",
-    "East London",
-    "Polokwane",
-    "Nelspruit",
-    "Rustenburg"
+    "Francistown",
+    "Maun",
+    "Serowe",
+    "Lobatse",
+    "Kasane",
+    "Jwaneng",
+    "Selebi-Phikwe",
+    "Molepolole",
+    "Palapye"
   ];
   const recentLocations = [
-    "Windhoek CBD",
-    "Windhoek Airport",
-    "Katutura",
-    "Eros",
-    "Khomas"
+    "Gaborone CBD",
+    "Sir Seretse Khama Airport",
+    "Tlokweng",
+    "Mogoditshane",
+    "Phakalane"
   ];
 
   useEffect(() => {
@@ -155,7 +155,7 @@ const LocationInput: FC<LocationInputProps> = ({
           </div>
         ) : (
           <div className="px-4 sm:px-6 py-4 text-neutral-500 dark:text-neutral-400">
-            No locations found for "{value}". Try searching for "Windhoek", "Walvis Bay", "Swakopmund", etc.
+            No locations found for "{value}". Try searching for "Gaborone", "Francistown", "Maun", etc.
           </div>
         )}
       </>

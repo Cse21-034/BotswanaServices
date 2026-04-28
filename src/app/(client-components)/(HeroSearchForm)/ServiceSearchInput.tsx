@@ -44,7 +44,7 @@ const ServiceSearchInput: FC<ServiceSearchInputProps> = ({
   ];
 
   const recentSearches = [
-    "Restaurants in Windhoek",
+    "Restaurants in Gaborone",
     "Hotels near me",
     "Car mechanics",
     "Doctors clinic"
